@@ -1,0 +1,30 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+
+{% block content %}
+{% include "shop/carousel.html" %}
+<div class="container-fluid px-5 mt-5">
+    <div class="row">
+        <!-- TODO: category -->
+        {% for n in '123' %}
+            <div class="col-4">
+                <div class="card">
+                    <a href="{{ product.get_absolute_url }}">
+                        <img class="card-img-top" src="{% if product.image %}{{ product.image.url }}{% else %}{% static "images/no_image.png" %}{% endif %}"/>
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <a href="{{ product.get_absolute_url }}">
+                                {{ product.name }}
+                                category {{n}}
+                            </a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+

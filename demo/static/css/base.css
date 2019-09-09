@@ -17,10 +17,42 @@
     align-items: center;
 }
 
+.navbar-suspend {
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    z-index: 2147483647; 
+    border: 0.5px solid rgba(0,0,0,.125);
+}
+
 .carousel-slide-label {
     color: #263238;
 }
 
 .carousel-slide-des {
     color: #263238;
+}
+
+.non-border {
+    border: none !important;
+}
+
+.demo-white {
+    background: white;
+}
+
+.demo-black {
+    background: #212121;
+}
+
+.demo-text-white {
+    color: #FFFFFF;
+}
+
+.demo-link {
+    text-decoration: none;
+}
+
+.full-width{
+    width: 100%;
 }

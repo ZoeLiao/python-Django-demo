@@ -1,0 +1,32 @@
+<footer id="footer" class="demo-black mt-4">
+    <!--Footer Links-->
+    <div class="container text-center text-md-left mt-5">
+        <div class="row mt-3">
+            {% for n in 'demo'%}
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 mt-4">
+                <h6 class="text-uppercase font-weight-bold">
+                    <strong class="demo-text-white">demo category</strong>
+                </h6>
+                <hr class="demo-white full-width">
+                {% for m in 'site' %}
+                    <p>
+                        <a href="#">{{ n }}{{ m }}{{ n }}</a>
+                    </p>
+                {% endfor %}
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!--/.Footer Links-->
+
+    <!-- Copyright-->
+    <div class="py-3 text-center demo-black demo-text-white">
+        © 2019 Copyright:
+        <a href="https://github.com/ZoeLiao/python-Django-demo" class="demo-text-white">
+            <strong>ZoeLiao</strong>
+        </a>
+    </div>
+    <!--/.Copyright -->
+
+</footer>
