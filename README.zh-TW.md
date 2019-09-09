@@ -17,7 +17,12 @@
         `STATIC_ROOT = os.path.join(BASE_DIR, 'static')`
     - media
         - MEDIA_URL = '/media/'
+
 - templates
     - filter:
         - linebreaks
             - {{ value|linebreaks }}，若 value='Joel\nis a slug'，則渲染完後為：<p>Joel<br>is a slug</p>
+
+- views
+    - get_absolute_url
+    - reverse
