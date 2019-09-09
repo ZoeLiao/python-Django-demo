@@ -119,3 +119,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+# 開發階段放置自己的靜態文件
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+# 執行 collectatic 後會將項目中的靜態文件收集到此目錄下
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')

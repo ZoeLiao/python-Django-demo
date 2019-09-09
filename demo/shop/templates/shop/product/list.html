@@ -34,7 +34,7 @@
 
         {% for product in products %}
             <a href="{{ product.get_absolute_url }}">
-                <img src="{% if product.image %}{{ product.image.url }}{% endif %}"/>
+                <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "images/no_image.png" %}{% endif %}"/>
             </a>
             <a href="{{ product.get_absolute_url }}">
                 {{ product.name }}
