@@ -6,19 +6,21 @@
 {% include "shop/carousel.html" %}
 
 <div class="container-fluid px-5 mt-5">
-    <div class="row">
-        <!-- TODO: category -->
-        {% for n in '123' %}
-            <div class="col-4">
+    <div class="mt-5 text-center">
+        <h3>Categories</h3>
+    </div>
+
+    <div class="row mt-5">
+        {% for category in categories %}
+            <div class="col-6">
                 <div class="card">
-                    <a href="{{ product.get_absolute_url }}">
-                        <img class="card-img-top" src="{% if product.image %}{{ product.image.url }}{% else %}{% static "images/no_image.png" %}{% endif %}"/>
+                    <a href="{{ category.get_absolute_url }}">
+                        <img class="card-img-top" src="{% if category.image %}{{ category.image.url }}{% else %}{% static "images/no_image.png" %}{% endif %}"/>
                     </a>
                     <div class="card-body">
                         <h5 class="card-title">
-                            <a href="{{ product.get_absolute_url }}">
-                                {{ product.name }}
-                                category {{n}}
+                            <a href="{{ category.get_absolute_url }}">
+                                {{ category }}
                             </a>
                         </h5>
                     </div>

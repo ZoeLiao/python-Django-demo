@@ -9,7 +9,14 @@ from shop.models import (
 
 
 def homepage(request):
-    return render(request, 'shop/homepage.html')
+    categories = Category.objects.all()
+    return render(
+        request,
+        'shop/homepage.html',
+        {
+            'categories': categories
+        }
+    )
 
 def product_list(request, category_slug=None):
     category = None

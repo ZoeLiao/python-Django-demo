@@ -18,3 +18,7 @@
 - `export PYTHONPATH=$PWD`
 - `python manage.py migrate`
 - `python manage.py createsuperuser`
+
+## DB
+- `python manage.py makemigrations`
+- `python manage.py migrate`

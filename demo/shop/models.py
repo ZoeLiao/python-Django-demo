@@ -14,6 +14,10 @@ class Category(models.Model):
             db_index=True,
             unique=True
         )
+    image = models.ImageField(
+            upload_to='categories/%Y/%m/%d',
+            blank=True
+        )
 
     # 定義資料庫 
     class Meta:

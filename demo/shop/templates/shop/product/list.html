@@ -17,7 +17,7 @@
 
     <div class="container-fluid px-5 mt-5">
         <div class="row">
-            <div class="col-3">
+            <div class="col-4">
                 <div class="sidebar_nav">
                     <h3>Categories</h3>
                     <ul>
@@ -33,7 +33,7 @@
                 </div>
             </div>
 
-            <div class="col-9">
+            <div class="col-8">
                 <div id="main" class="product-list">
                     <h1>
                         {% if category %}
@@ -42,19 +42,22 @@
                             Products
                         {% endif %}
                     </h1>
+                    <div class="row">
                     {% for product in products %}
-                        <div class="card" style="width: 12rem;">
-                            <a href="{{ product.get_absolute_url }}">
-                                <img class="card-img-top" src="{% if product.image %}{{ product.image.url }}{% else %}{% static "images/no_image.png" %}{% endif %}"/>
-                            </a>
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <a href="{{ product.get_absolute_url }}">
-                                        {{ product.name }}
-                                    </a>
-                                </h5>
-                                <p class="card-text">${{ product.price }}</p>
-                                <a href="#" class="btn btn-primary">Add to cart</a>
+                        <div class="col-4">
+                            <div class="card">
+                                <a href="{{ product.get_absolute_url }}">
+                                    <img class="card-img-top" src="{% if product.image %}{{ product.image.url }}{% else %}{% static "images/no_image.png" %}{% endif %}"/>
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <a href="{{ product.get_absolute_url }}">
+                                            {{ product.name }}
+                                        </a>
+                                    </h5>
+                                    <p class="card-text">${{ product.price }}</p>
+                                    <a href="#" class="btn btn-primary">Add to cart</a>
+                                </div>
                             </div>
                         </div>
                     {% endfor %}
