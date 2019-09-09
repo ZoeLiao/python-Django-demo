@@ -1,0 +1,26 @@
+@media (min-width: 992px)
+.navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+}
+
+@media (min-width: 992px)
+.navbar-expand-lg {
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.navbar-collapse {
+    flex-basis: 100%;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.carousel-slide-label {
+    color: #263238;
+}
+
+.carousel-slide-des {
+    color: #263238;
+}

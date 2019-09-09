@@ -10,6 +10,7 @@
 {% endblock %}
 
 {% block content %}
+
     <div id="sidebar">
         <h3>Categories</h3>
         <ul>
@@ -23,6 +24,7 @@
             {% endfor %}
         </ul>
     </div>
+
     <div id="main" class="product-list">
         <h1>
             {% if category %}
@@ -31,16 +33,21 @@
                 Products
             {% endif %}
         </h1>
-
         {% for product in products %}
-            <a href="{{ product.get_absolute_url }}">
-                <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "images/no_image.png" %}{% endif %}"/>
-            </a>
-            <a href="{{ product.get_absolute_url }}">
-                {{ product.name }}
-            </a>
-            <br>
-            ${{ product.price }}
+            <div class="card" style="width: 18rem;">
+                <a href="{{ product.get_absolute_url }}">
+                    <img class="card-img-top" src="{% if product.image %}{{ product.image.url }}{% else %}{% static "images/no_image.png" %}{% endif %}"/>
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a href="{{ product.get_absolute_url }}">
+                            {{ product.name }}
+                        </a>
+                    </h5>
+                    <p class="card-text">${{ product.price }}</p>
+                    <a href="#" class="btn btn-primary">Add to cart</a>
+                </div>
+            </div>
         {% endfor %}
     </div>
 {% endblock %}
