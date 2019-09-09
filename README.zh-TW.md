@@ -9,6 +9,7 @@
 - 參考資料：https://kknews.cc/zh-tw/code/pe9o3x8.html
 
 ## 學習筆記
+### Django
 - settings
     - STATICFILES_DIRS 與 STATIC_ROOT：
         - 開發階段放置自己的靜態文件  
@@ -26,3 +27,11 @@
 - views
     - get_absolute_url
     - reverse
+
+### Bootstrap
+- px:
+    - padding-left, padding-right
+    - ex: `px-2`
+- mt:
+    - margin-top
+    - ex: `mt-5`
