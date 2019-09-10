@@ -1,28 +1,53 @@
 {% extends "shop/base.html" %}
+{% load static %}
+
+{% block extra_style_sheet %}
+<link href="{% static 'css/orders.css' %}" rel="stylesheet">
+{% endblock %}
 
 {% block title %} 
 Checkout
 {% endblock %}
 
 {% block content %}
+<div class="container-fluid px-5 mt-5">
     <h1>Checkout</h1>
 
-    <div class="order-info">
-        <h3>Your Order</h3>
-        <ul>
-            {% for item in cart %}
-                <li>
-                    {{ item.quantity }}*{{ item.product.name }}
-                    <span>${{ item.total_price }}</span>
-                </li>
-            {% endfor %}
-        </ul>
-        <p>Total: ${{ cart.get_total_price }}</p>
-    </div>
+    <div class="row">
+        <div class="col-md-7 col-lg-7 col-xl-7">
+        <div class="card px-4"> 
+            <div class="card-body">
+                <h5 class="card-title">Information</h5>
+                <form action="." method="post" id="orders-form" class="my-5">
+                    {{ form.as_p }}
+                    <div class="text-right">
+                        <input type="submit" class="btn btn-info" value="Place order">
+                    </div>
+                    {% csrf_token %}
+                </form>
+            </div>
+        </div>
+        </div>
 
-    <form action="." method="post" class="order-form">
-        {{ form.as_p }}
-        <p><input type="submit" value="Place order"></p>
-        {% csrf_token %}
-    </form>
+        <div class="col-md-5 col-lg-5 col-xl-5">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Your Order</h5>
+                    <ul>
+                        {% for item in cart %}
+                            <li>
+                                {{ item.quantity }}*{{ item.product.name }}
+                                <span>${{ item.total_price }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    <p>Total: ${{ cart.get_total_price }}</p>
+                </div>
+            </div>
+        </div>
+</div>
+{% endblock %}
+
+{% block extra_script %}
+    <script src="{% static 'js/order.js' %}"></script>
 {% endblock %}

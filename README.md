@@ -2,7 +2,8 @@
 - Use Django to build a online shopping site.
 - Techniques for building the website:
     - [Django](https://www.djangoproject.com/)
-        - (TODO)session
+        - session
+        - form
     - (TODO)[Celery](http://www.celeryproject.org/)
     - [Bootstrap 4.3](https://getbootstrap.com/)
 - [中文 (Traditional Chinese)](https://github.com/ZoeLiao/python-Django-demo/blob/master/README.zh-TW.md)

@@ -7,7 +7,7 @@
  */
 
 
-change_nav_color = () => {
+changeNavColor = () => {
     let navbar = $('#base-navbar')[0];
     if (window.scrollY > 100) {
         navbar.classList.add('navbar-suspend-white')
@@ -19,5 +19,5 @@ change_nav_color = () => {
 }
 
 $(window).scroll(() => {
-    change_nav_color()
+    changeNavColor()
 })

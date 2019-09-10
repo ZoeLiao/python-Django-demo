@@ -2,9 +2,10 @@
 練習用 Django 架設購物網站，並用 Boostrap 構建前端
 - 使用技術：
     - Django
-        - session (TODO)
+        - session
+        - forms
     - (TODO)[Celery](http://www.celeryproject.org/)
-    - (Bootstrap 4.3)[https://getbootstrap.com/]
+    - [Bootstrap 4.3](https://getbootstrap.com/)
 
 - 參考資料：https://kknews.cc/zh-tw/code/pe9o3x8.html
 
