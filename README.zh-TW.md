@@ -31,6 +31,8 @@
             - {{ value|linebreaks }}，若 value='Joel\nis a slug'，則渲染完後為：<p>Joel<br>is a slug</p>
 - 上下文
 - session
+- form.as_p
+- csrf_token
 
 - views
     - get_absolute_url

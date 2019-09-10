@@ -64,7 +64,7 @@
 
     <p>
         <a href="{% url 'shop:product_list' %}">Continue shopping</a>
-        <a href="#">Checkout</a>
+        <a href="{% url 'orders:order_create' %}">Checkout</a>
     </p>
 </div>
 {% endblock %}
