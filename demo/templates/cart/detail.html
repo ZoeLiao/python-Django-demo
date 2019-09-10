@@ -1,6 +1,10 @@
 {% extends "shop/base.html" %}
 {% load static %}
 
+{% block extra_style_sheet %}
+<link href="{% static 'css/cart_detail.css' %}" rel="stylesheet">
+{% endblock %}
+
 {% block title %}
     Your shopping cart
 {% endblock %}
@@ -8,7 +12,7 @@
 {% block content %}
 <div class="container-fluid px-5 mt-5">
     <h1>Your shopping cart</h1>
-    <table class="table">
+    <table class="table table-responsive table-hover">
         <thead>
             <tr class="table-Warning">
                 <th>Image</th>
@@ -30,8 +34,21 @@
                         </a>
                     </td>
                     <td>{{ product.name }}</td>
-                    <td>{{ item.quantity }}</td>
-                    <td><a href="{% url "cart:cart_remove" product.id %}">Remove</td>
+                    <td>
+                        <form action="{% url 'cart:cart_add' product.id %}" method="post">
+                            <div class="input-group">
+                                <div class="ml-auto">
+                                    {{ item.update_quantity_form.quantity }}
+                                    {{ item.update_quantity_form.update }}
+                                </div>
+                                <div class="input-group-append mr-auto">
+                                    <input type="submit" value="update" class="btn btn-info">
+                                </div>
+                            </div>
+                            {% csrf_token %}
+                        </form>
+                    </td>
+                    <td><input onclick="window.location.href='{% url "cart:cart_remove" product.id %}'" type="button" class="btn btn-danger" value="Remove"></td>
                     <td>{{ item.price }}</td>
                     <td>{{ item.total_price }}</td>
                 </tr>
@@ -39,7 +56,7 @@
             {% endfor %}
             <tr>
                 <td>Total</td>
-                <td colspan="4">Total</td>
+                <td colspan="4"></td>
                 <td>{{ cart.get_total_price }}</td>
             </tr>
         </tbody>
