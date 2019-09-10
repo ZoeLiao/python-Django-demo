@@ -17,7 +17,7 @@
 
     <div class="container-fluid px-5 mt-5">
         <div class="row">
-            <div class="col-3">
+            <div class="col-md-3 col-lg-3 col-xl-3">
                 <div class="sidebar_nav px-3 py-2">
                     <h3>Categories</h3>
                     <ul>
@@ -33,7 +33,7 @@
                 </div>
             </div>
 
-            <div class="col-9">
+            <div class="col-md-9 col-lg-9 col-xl-9">
                 <div id="main" class="product-list">
                     <h1>
                         {% if category %}
@@ -44,7 +44,7 @@
                     </h1>
                     <div class="row">
                     {% if not products %}
-                        <div class="col-4">
+                        <div class="col-md-4 col-lg-4 col-xl-4">
                             <div class="card">
                                 <img class="card-img-top" src="{% static "images/no_image.png" %}"/>
                                 <div class="card-body">
@@ -57,7 +57,7 @@
 
                     {% endif %}
                     {% for product in products %}
-                        <div class="col-4">
+                        <div class="col-md-4 col-lg-4 col-xl-4 mb-2">
                             <div class="card">
                                 <a href="{{ product.get_absolute_url }}">
                                     <img class="card-img-top" src="{% if product.image %}{{ product.image.url }}{% else %}{% static "images/no_image.png" %}{% endif %}"/>

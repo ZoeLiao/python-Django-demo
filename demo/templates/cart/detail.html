@@ -6,16 +6,17 @@
 {% endblock %}
 
 {% block content %}
+<div class="container-fluid px-5 mt-5">
     <h1>Your shopping cart</h1>
-    <table>
+    <table class="table">
         <thead>
-            <tr>
-                <th>Image<th>
-                <th>Product<th>
-                <th>Quantity<th>
-                <th>Remove<th>
-                <th>unit Price<th>
-                <th>Price<th>
+            <tr class="table-Warning">
+                <th>Image</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Remove</th>
+                <th>unit Price</th>
+                <th>Price</th>
             </tr>
         </thead>
 
@@ -23,7 +24,7 @@
             {% for item in cart %}
                 {% with product=item.product %}
                 <tr>
-                    <td>
+                    <td width="30%;">
                         <a gref="{{ product.get_absolute_url }}">
                             <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'images/no_image.png' %}{% endif %}" style="width:100%">
                         </a>
@@ -38,7 +39,7 @@
             {% endfor %}
             <tr>
                 <td>Total</td>
-                <td colspane="4">Total</td>
+                <td colspan="4">Total</td>
                 <td>{{ cart.get_total_price }}</td>
             </tr>
         </tbody>
@@ -48,5 +49,6 @@
         <a href="{% url 'shop:product_list' %}">Continue shopping</a>
         <a href="#">Checkout</a>
     </p>
+</div>
 {% endblock %}
 

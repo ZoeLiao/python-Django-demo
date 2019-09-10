@@ -17,24 +17,24 @@
             </div>
 
             <div class="col-8">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h1>{{ product.name }}</h1>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a>
+                        </h5>
+                        <p class="card-text">{{ product.description|linebreaks }}</p>
+                        <p class="card-text">${{ product.price }}</p>
+                        <form action="{% url 'cart:cart_add' product.id%}" method="post">
+                            {{ cart_product_form }}
+                            {% csrf_token %}
+                            <input type="submit" class="btn btn-primary" value="Add to cart">
+                        </form>
+                    </div>
+                </div>
 
-                <h1>{{ product.name }}</h1>
-
-                <h2>
-                    <a href="{{ product.category.get_absolute_url }}">
-                        {{ product.category }}
-                    </a>
-                </h2>
-
-                <p class="price">${{ product.price }}</p>
-
-                {{ product.description|linebreaks }}
-
-                <form action="{% url 'cart:cart_add' product.id%}" method="post">
-                    {{ cart_product_form }}
-                    {% csrf_token %}
-                    <input type="submit" value="Add to cart">
-                </form>
             </div>
         </div>
     </div>
