@@ -19,9 +19,15 @@
 
 .navbar-suspend {
     width: 100%;
-    position: fixed;
-    background-color: white;
+    position: fixed !important;
+    background-color: #f8fafb;
     z-index: 2147483647; 
+    border: none;
+    top: 0;
+}
+
+.navbar-suspend-white {
+    background-color: white;
     border: 0.5px solid rgba(0,0,0,.125);
 }
 
