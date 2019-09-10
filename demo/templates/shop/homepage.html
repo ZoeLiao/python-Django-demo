@@ -14,12 +14,14 @@
         {% for category in categories %}
             <div class="col-6">
                 <div class="card">
-                    <a href="{{ category.get_absolute_url }}">
-                        <img class="card-img-top" src="{% if category.image %}{{ category.image.url }}{% else %}{% static "images/no_image.png" %}{% endif %}"/>
-                    </a>
+                    <div class="demo-grey">
+                        <a href="{{ category.get_absolute_url }}">
+                            <img class="card-img-top" src="{% if category.image %}{{ category.image.url }}{% else %}{% static "images/no_image.png" %}{% endif %}"/>
+                        </a>
+                    </div>
                     <div class="card-body">
-                        <h5 class="card-title">
-                            <a href="{{ category.get_absolute_url }}">
+                        <h5 class="card-title text-center">
+                            <a href="{{ category.get_absolute_url }}" class="demo-link">
                                 {{ category }}
                             </a>
                         </h5>

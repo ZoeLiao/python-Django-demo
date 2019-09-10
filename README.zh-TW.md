@@ -14,6 +14,8 @@
 - 到 [Google Map](https://www.google.com.tw/maps/preview?hl=zh-TW) 輸入地址，複製的 HTML，詳細可參考：[如何將 Google 地圖嵌入網站？](https://medium.com/@zoejoyuliao/%E5%A6%82%E4%BD%95%E5%9C%A8%E7%B6%B2%E7%AB%99%E5%B5%8C%E5%85%A5-google-%E5%9C%B0%E5%9C%96-636d3452b80d)
 
 ### Django
+- urls
+    - url 的順序影響解析順序，由上往下解析
 - settings
     - STATICFILES_DIRS 與 STATIC_ROOT：
         - 開發階段放置自己的靜態文件  
@@ -31,6 +33,7 @@
 - views
     - get_absolute_url
     - reverse
+    - @require_POST: 只響應 POST 請求 
 
 ### Bootstrap
 - px:
