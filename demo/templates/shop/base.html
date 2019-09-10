@@ -26,7 +26,9 @@
                 <div class="collapse navbar-collapse" id="globalNavbar">
                     <ul class="navbar-nav d-none d-lg-flex ml-2 order-3">
                         <li class="nav-item"><a class="nav-link" href="/account/">My Account</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/cart/">Cart</a></li>
+                        {% with total_items=cart|length %}
+                        <li class="nav-item"><a class="nav-link" href="/cart/">Cart({{ total_items }})</a></li>
+                        {% endwith %}
                     </ul>
                     <ul class="navbar-nav d-lg-none">
                         <li class="nav-item-divider"></li>
