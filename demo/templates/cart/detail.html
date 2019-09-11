@@ -12,7 +12,7 @@
 {% block content %}
 <div class="container-fluid px-5 mt-5">
     <h1>Your shopping cart</h1>
-    <table class="table table-responsive table-hover">
+    <table class="table table-responsive table-hover mt-3">
         <thead>
             <tr class="table-Warning">
                 <th>Image</th>
@@ -42,7 +42,7 @@
                                     {{ item.update_quantity_form.update }}
                                 </div>
                                 <div class="input-group-append mr-auto">
-                                    <input type="submit" value="update" class="btn btn-info">
+                                    <input type="submit" value="update" class="btn btn-info btn-sm">
                                 </div>
                             </div>
                             {% csrf_token %}
@@ -54,7 +54,7 @@
                 </tr>
                 {% endwith %}
             {% endfor %}
-            <tr>
+            <tr class="demo-blue">
                 <td>Total</td>
                 <td colspan="4"></td>
                 <td>{{ cart.get_total_price }}</td>
@@ -62,10 +62,10 @@
         </tbody>
     </table>
 
-    <p>
-        <a href="{% url 'shop:product_list' %}">Continue shopping</a>
-        <a href="{% url 'orders:order_create' %}">Checkout</a>
-    </p>
+    <div class="d-flex justify-content-end mt-4">
+        <button class="btn btn-info mr-2" onclick="window.location.href='{% url "shop:product_list" %}'">Continue shopping</button>
+        <button class="btn btn-primary ml-2" onclick="window.location.href='{% url "orders:order_create" %}'">Checkout</button>
+    </div>
 </div>
 {% endblock %}
 
