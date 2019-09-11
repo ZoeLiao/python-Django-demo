@@ -78,3 +78,6 @@
 - Monitor:
     - `celery -A demo flower`
     - Visit [http://localhost:5555](http://localhost:5555)
+
+## Test
+- `python manage.py test <app_name>.tests`

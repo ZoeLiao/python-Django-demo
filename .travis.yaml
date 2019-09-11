@@ -1,0 +1,13 @@
+env:
+  global:
+    - DOMAIN=travis.com
+services:
+  - redis-server
+  - sqlite
+language: python
+python:
+  - "3.6"
+install:
+  - pip install --no-cache-dir -r requirements.txt
+script:
+  - python demo/manage.py test shop.tests
