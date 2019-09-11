@@ -1,11 +1,24 @@
 # python-Django-demo
 - Use Django to build a online shopping site.
-- Techniques for building the website:
-    - [Django](https://www.djangoproject.com/)
-        - session
-        - form
-    - (TODO)[Celery](http://www.celeryproject.org/)
-    - [Bootstrap 4.3](https://getbootstrap.com/)
+- Techniques for building the demo website:
+    - Backend:
+        - [Django](https://www.djangoproject.com/)
+            - session
+            - form
+            - email
+            - i18n (TODO)
+            - test (TODO)
+        - [Celery](http://www.celeryproject.org/)
+            - [flower](https://flower.readthedocs.io/en/latest/)
+        - [AGINX](https://nginx.org/en/) (TODO)
+        - [Jenkins](https://jenkins.io/zh/) (TODO)
+    - Frontend:
+        - [Bootstrap 4.3](https://getbootstrap.com/)
+    - Database:
+        - [SQLite](https://www.sqlite.org/index.html)
+        - [redis](https://redis.io/)
+    - Cloud platform:
+        - [AWS](https://aws.amazon.com/tw/) (TODO)
 - [中文 (Traditional Chinese)](https://github.com/ZoeLiao/python-Django-demo/blob/master/README.zh-TW.md)
 
 ## Start project
@@ -27,8 +40,8 @@
 - `python manage.py migrate`
 
 ## Send email
-- create settings_local.py by `vim demo/settings_local.py`
-- input your email information (settings_local.py is an ignored file):
+- Create settings_local.py by `vim demo/settings_local.py` (settings_local.py is an ignored file)
+- Input your email information in settings_local.py:
     - `EMAIL_HOST = 'smtp.gmail.com'`
     - `EMAIL_PORT = 587`
     - `EMAIL_HOST_USER = '<your_email>@gmail.com'`
@@ -36,4 +49,7 @@
 - start Celery by the following command
 
 ## Celery
-- `celery -A demo worker -l info`
+- Start: `celery -A demo worker -l info`
+- Monitor:
+    - `celery -A demo flower`
+    - Visit [http://localhost:5555](http://localhost:5555)
