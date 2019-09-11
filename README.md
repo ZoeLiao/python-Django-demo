@@ -1,12 +1,19 @@
 # python-Django-demo
 - [中文 (Traditional Chinese)](https://github.com/ZoeLiao/python-Django-demo/blob/master/README.zh-TW.md)
 - Use Django to build a online shopping site.
+- Functions:
+    - Basic shopping site
+    - Loggin in with social media accounts
+    - Use session to record user's order
+    - Sending email by Celery + Redis + Gmail
 - Techniques for building the demo website:
     - Backend:
         - [Django](https://www.djangoproject.com/)
+            - social-auth-app-django 
             - session
             - form
             - email
+            - management
             - i18n (TODO)
             - test (TODO)
             - management
@@ -21,6 +28,9 @@
         - [redis](https://redis.io/)
     - Cloud platform:
         - [AWS](https://aws.amazon.com/tw/) (TODO)
+- Reference:
+    - [shopping site (中文)](https://kknews.cc/zh-tw/code/pe9o3x8.html)
+    - [Loggin in with social media accounts](https://scotch.io/tutorials/django-authentication-with-facebook-instagram-and-linkedin)
 
 ## Start project
 - `python3 -m venv venv`
