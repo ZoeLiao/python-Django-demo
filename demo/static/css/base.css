@@ -82,3 +82,8 @@
 .demo-grey {
     background-color: #f8fafb;
 }
+
+.cart-button {
+    padding: 0px 3px 0px 3px !important;
+    border-radius: 50% !important;
+}

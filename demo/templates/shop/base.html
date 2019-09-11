@@ -18,30 +18,33 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light navbar-suspend" id="base-navbar">
         <div class="container">
-            <a href="/"><img src="{% static 'images/logo.png' %}" style="width:48px;"></a>
-            <div class="d-flex ml-auto">
-                <button class="navbar-toggler non-border" type="button" data-toggle="collapse" data-target="#globalNavbar" aria-controls="globalNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            </div>
-            <div class="d-flex flex-row-reverse">
-                <div class="collapse navbar-collapse" id="globalNavbar">
-                    <ul class="navbar-nav d-none d-lg-flex ml-2 order-3">
-                        <li class="nav-item"><a class="nav-link" href="/accounts/profile/">My Account</a></li>
-                        {% with total_items=cart|length %}
-                        <li class="nav-item"><a class="nav-link" href="/cart/">Cart({{ total_items }})</a></li>
-                        {% endwith %}
-                    </ul>
-                    <ul class="navbar-nav d-lg-none">
-                        <li class="nav-item-divider"></li>
-                        <li class="nav-item"><a class="nav-link" href="/account/signin/">Signin</a></li>
+            <a class="navbar-brand" href="/"><img src="{% static 'images/logo.png' %}" style="width:48px;"></a>
 
-                        <li class="nav-item"><a class="nav-link" href="/cart/">Cart</a></li>
-                    </ul>
-                    <form class="form-inline form-navbar my-2 my-lg-0 order-2" action="">
-                        <input class="form-control" name="s" type="text" placeholder="Search">
-                    </form>
-                </diV>
-            </div>
-        </div>
+			<button class="navbar-toggler non-border" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		    </button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+{{ request.name }}
+					<li class="nav-item {% if request.resolver_match.url_name == 'homepage' %}active{% endif %}">
+						<a class="nav-link" href="/">Home</a>
+					</li>
+					<li class="nav-item {% if request.resolver_match.url_name == 'profile' %}active{% endif %}">
+						<a class="nav-link" href="/accounts/profile/">My Account</a>
+					</li>
+					{% with total_items=cart|length %}
+					<li class="nav-item {% if request.resolver_match.url_name == 'cart_detail' %}active{% endif %}">
+						<a class="nav-link" href="/cart/">Cart{% if  total_items  != 0 %}<input type="button" value="{{ total_items }}" class="btn btn-outline-info btn-sm ml-1 cart-button">{% endif %}{% if request.resolver_match.url_name == 'cart_list' %}{% endif %}</a>
+					</li>
+					{% endwith %}
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				</form>
+			</div>
+		</div>
     </nav>
     <!--/ navbar -->
 
