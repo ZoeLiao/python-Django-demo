@@ -1,4 +1,5 @@
 # python-Django-demo
+- [中文 (Traditional Chinese)](https://github.com/ZoeLiao/python-Django-demo/blob/master/README.zh-TW.md)
 - Use Django to build a online shopping site.
 - Techniques for building the demo website:
     - Backend:
@@ -8,6 +9,7 @@
             - email
             - i18n (TODO)
             - test (TODO)
+            - management
         - [Celery](http://www.celeryproject.org/)
             - [flower](https://flower.readthedocs.io/en/latest/)
         - [AGINX](https://nginx.org/en/) (TODO)
@@ -19,7 +21,6 @@
         - [redis](https://redis.io/)
     - Cloud platform:
         - [AWS](https://aws.amazon.com/tw/) (TODO)
-- [中文 (Traditional Chinese)](https://github.com/ZoeLiao/python-Django-demo/blob/master/README.zh-TW.md)
 
 ## Start project
 - `python3 -m venv venv`
@@ -36,8 +37,22 @@
 - `python manage.py createsuperuser`
 
 ## Migrate Database
-- `python manage.py makemigrations`
-- `python manage.py migrate`
+- In general cases:
+    - `python manage.py makemigrations`
+    - `python manage.py migrate`
+- Failed to detect changes:
+    - Run the command of [Management - Delete the data of specific app](https://github.com/ZoeLiao/python-Django-demo#management)
+    - fake:
+        - `python manage.py makemigrations <app_name>`
+        - `python manage.py migrate --fake`
+    - remigrate:
+        - `python manage.py makemigrations <app_name>`
+        - `python manage.py migrate`
+
+## Management
+- Delete the data of specific app:
+    - `python manage.py manual_migration <app_name>`
+    - ex: `python manage.py manual_migration shop`
 
 ## Send email
 - Create settings_local.py by `vim demo/settings_local.py` (settings_local.py is an ignored file)
