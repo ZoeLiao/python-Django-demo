@@ -1,0 +1,21 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+{% block title %}
+    Signin
+{% endblock %}
+{% block content %}
+<div class="container-fluid px-5 mt-5 text-center">
+    <div class="card text-center">
+        <div class="card-header">
+            <h1>LOGIN</h1>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">
+            <button class="btn btn-primary mb-2">
+                <a class="demo-link demo-text-white" href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
+            </button>
+        </div>
+    </div>
+</div>
+{% endblock %}

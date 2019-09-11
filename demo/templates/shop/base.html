@@ -25,14 +25,15 @@
             <div class="d-flex flex-row-reverse">
                 <div class="collapse navbar-collapse" id="globalNavbar">
                     <ul class="navbar-nav d-none d-lg-flex ml-2 order-3">
-                        <li class="nav-item"><a class="nav-link" href="/account/">My Account</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/accounts/profile/">My Account</a></li>
                         {% with total_items=cart|length %}
                         <li class="nav-item"><a class="nav-link" href="/cart/">Cart({{ total_items }})</a></li>
                         {% endwith %}
                     </ul>
                     <ul class="navbar-nav d-lg-none">
                         <li class="nav-item-divider"></li>
-                        <li class="nav-item"><a class="nav-link" href="/account/">My Account</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/account/signin/">Signin</a></li>
+
                         <li class="nav-item"><a class="nav-link" href="/cart/">Cart</a></li>
                     </ul>
                     <form class="form-inline form-navbar my-2 my-lg-0 order-2" action="">
@@ -61,7 +62,6 @@
     <script src="{% static 'js/base.js' %}"></script>
 
     {% block extra_script %}{% endblock %}
-
 </body>
 
 </html>

@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.auth import views as auth_views
 from django.contrib import admin
 from django.urls import (
     include,
@@ -24,8 +25,11 @@ from django.urls import (
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('signout/', auth_views.LogoutView.as_view(), name="signout"),
+    path('accounts/', include(('accounts.urls', 'accounts'), namespace='accounts')),
     path('cart/', include(('cart.urls', 'cart'), namespace='cart')),
     path('orders/', include(('orders.urls', 'orders'), namespace='orders')),
+    path('social-auth/', include(('social_django.urls', 'social_django'), namespace='social_django')),
     path('', include(('shop.urls', 'shop'), namespace='shop')),
 ]
 
