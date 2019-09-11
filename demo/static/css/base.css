@@ -55,6 +55,14 @@
     background-color: #212121;
 }
 
+.demo-black:hover {
+    background-color: black;
+}
+
+.demo-black:active {
+    background-color: black;
+}
+
 .demo-text-white {
     color: #FFFFFF;
 }

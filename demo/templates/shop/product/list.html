@@ -21,11 +21,11 @@
                     <h3>Categories</h3>
                     <ul>
                         <li {% if not category %} class="selected" {% endif %}>
-                            <a href="{% url 'shop:product_list' %}">All</a>
+                            <a href="{% url 'shop:product_list' %}" {% if category.slug != c.slug %}class="demo-link demo-text-black"{% endif %}>All</a>
                         </li>
                         {% for c in categories %}
-                            <li {% if category.slug == c.slug %} class="selected" {% endif %}>
-                                <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+                        <li {% if category.slug == c.slug %} class="selected" {% else %}{% endif %}>
+                            <a href="{{ c.get_absolute_url }}" {% if category.slug != c.slug %}class="demo-link demo-text-black"{% endif %}>{{ c.name }}</a>
                             </li>
                         {% endfor %}
                     </ul>
@@ -47,7 +47,7 @@
                             <div class="card">
                                 <img class="card-img-top" src="{% static "images/no_image.png" %}"/>
                                 <div class="card-body">
-                                    <h5 class="card-title">
+                                    <h5 class="card-title text-center">
                                         Coming Soon
                                     </h5>
                                 </div>
@@ -61,14 +61,12 @@
                                 <a href="{{ product.get_absolute_url }}">
                                     <img class="card-img-top" src="{% if product.image %}{{ product.image.url }}{% else %}{% static "images/no_image.png" %}{% endif %}"/>
                                 </a>
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <a href="{{ product.get_absolute_url }}">
-                                            {{ product.name }}
-                                        </a>
-                                    </h5>
+                                <div class="card-body text-center">
+                                    <a href="{{ product.get_absolute_url }}">
+                                        <h5 class="card-title demo-text-black">
+{{ product.name }}</h5>
+                                    </a>
                                     <p class="card-text">${{ product.price }}</p>
-                                    <a href="#" class="btn btn-primary">Add to cart</a>
                                 </div>
                             </div>
                         </div>
