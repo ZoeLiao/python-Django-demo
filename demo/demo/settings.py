@@ -127,8 +127,34 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 # 執行 collectatic 後會將項目中的靜態文件收集到此目錄下
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-
+# Media
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
+# Session
 CART_SESSION_ID = 'cart'
+
+# Email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = ''
+EMAIL_USE_TLS = True
+EMAIL_PORT = ''
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+
+# Celery
+BROKER_URL = 'redis://localhost:6379'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'Asia/Taipei'
+
+
+try:
+    # import email information
+    from demo.settings_local import *
+    print('import EMAIL_HOST_USER from settings_local:', settings_local)
+except:
+    pass
+
