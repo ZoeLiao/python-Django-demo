@@ -44,15 +44,19 @@
 }
 
 .demo-white {
-    background: white;
+    background-color: white !important;
 }
 
 .demo-black {
-    background: #212121;
+    background-color: #212121;
 }
 
 .demo-text-white {
     color: #FFFFFF;
+}
+
+.demo-text-black {
+    color: rgba(0,0,0,.5);
 }
 
 .demo-link {
