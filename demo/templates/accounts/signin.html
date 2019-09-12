@@ -13,21 +13,25 @@
                 <h3>{% trans "Sign In" %}</h3>
             </div>
             <div class="card-body px-5 mt-3">
-                <h5 class="card-title">
-                <div>
-                    <button class="btn btn-primary mb-2">
-                        <a class="demo-link demo-text-white" href="{% url 'social:begin' 'facebook' %}">{% trans "Sign in with Facebook" %}</a>
-                    </button>
+                <div class="card-title">
+                    <img src="{% static 'images/logo.png' %}" width="180rem" height="180rem"/>
                 </div>
-                <div>
-                    <button class="btn btn-danger mb-2">
-                        <a class="demo-link demo-text-white" href="{% url 'social:begin' 'instagram' %}">{% trans "Sign in with Instagram" %}</a>
-                    </button>
-                </div>
-                <div>
-                    <button class="btn btn-info mb-2">
-                        <a class="demo-link demo-text-white" href="{% url 'social:begin' 'github' %}">{% trans "Sign in with Github" %}</a>
-                    </button>
+                <div class="mt-3 mb-2">
+                    <div>
+                        <button class="btn btn-primary mb-2 width-100-block">
+                            <a class="demo-link demo-text-white " href="{% url 'social:begin' 'facebook' %}">{% trans "Sign in with Facebook" %}</a>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="btn btn-danger mb-2 width-100-block">
+                            <a class="demo-link demo-text-white" href="{% url 'social:begin' 'instagram' %}">{% trans "Sign in with Instagram" %}</a>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="btn btn-info mb-2 width-100-block">
+                            <a class="demo-link demo-text-white" href="{% url 'social:begin' 'github' %}">{% trans "Sign in with Github" %}</a>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

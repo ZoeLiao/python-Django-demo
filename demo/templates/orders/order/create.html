@@ -24,7 +24,7 @@
                 <form action="." method="post" id="orders-form" class="my-5 px-4">
                     {{ form.as_p }}
                     <div class="text-right mt-5">
-                        <input type="submit" class="btn btn-info" value="Place order">
+                        <input type="submit" class="btn btn-info" value="{% trans 'Place order' %}">
                     </div>
                     {% csrf_token %}
                 </form>

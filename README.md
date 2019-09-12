@@ -82,5 +82,5 @@
 - `python manage.py test <app_name>.tests`
 
 ## i18n
-- python manage.py makemessages -l zh_TW
-- python manage.py compilemessages
+- `python manage.py makemessages -l zh_TW`
+- `python manage.py compilemessages`

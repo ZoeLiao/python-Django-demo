@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.conf import settings
+from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 from django.contrib import admin
@@ -22,16 +23,18 @@ from django.urls import (
     path
 )
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('social-auth/', include(('social_django.urls', 'social_django'), namespace='social_django')),
+]
+
+urlpatterns += i18n_patterns(
     path('signout/', auth_views.LogoutView.as_view(), name="signout"),
     path('accounts/', include(('accounts.urls', 'accounts'), namespace='accounts')),
     path('cart/', include(('cart.urls', 'cart'), namespace='cart')),
     path('orders/', include(('orders.urls', 'orders'), namespace='orders')),
-    path('social-auth/', include(('social_django.urls', 'social_django'), namespace='social_django')),
     path('', include(('shop.urls', 'shop'), namespace='shop')),
-]
+)
 
 # 生產環境不應該用 Django 服務靜態文件
 if settings.DEBUG:

@@ -211,4 +211,4 @@ msgstr "種類"
 
 #: templates/shop/homepage.html:129
 msgid "Demo Map"
-msgstr ""
+msgstr "Demo 地圖"
