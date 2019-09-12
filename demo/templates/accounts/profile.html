@@ -12,12 +12,16 @@
                 <h3>My Account</h3>
             </div>
             <div class="card-body px-5">
+                {{ass.extra_data}}
                 {% for ass in backends.associated %}
                     <div class="text-center mb-3">
                         {% if ass.provider == 'facebook' %}
                         <img src="{{ ass.extra_data.picture.data.url }}" alt="" width="180" height="180" style="border-radius: 50%">
                         {% elif ass.provider == 'instagram' %}
                         <img src="{{ ass.extra_data.user.profile_picture }}" alt="" width="180" height="180" style="border-radius: 50%">
+                        {% elif ass.provider == 'github' %}
+                        <!-- TODO: git github image -->
+                        <img src="{% static 'images/github.svg' %}" alt="" width="180" height="180" style="border-radius: 50%">
                         {% endif %}
                     </div>
                     <div class="row">
@@ -38,6 +42,8 @@
                             <p>{{ ass.extra_data.name }}</p>
                         {% elif ass.provider == 'instagram' %}
                             <p>{{ ass.extra_data.user.full_name }}</p>
+                        {% elif ass.provider == 'github' %}
+                            <p>{{ ass.extra_data.login }}</p>
                         {% endif %}
                         </div>
                     </div>
@@ -51,6 +57,8 @@
                             <a href="{{ass.extra_data.profile_url}}" class="demo-link demo-text-black">link</a>
                         {% elif ass.provider == 'instagram' %}
                             <a href="https://instagram.com/{{ ass.username }}" class="demo-link demo-text-black">link</a>
+                        {% elif ass.provider == 'github' %}
+                        <a href="https://github.com/{{ ass.extra_data.login }}" class="demo-link demo-text-black">link</a>
                         {% endif %}
                         </div>
                     </div>
@@ -61,8 +69,4 @@
         </div>
     </div>
 </div>
-{% endblock %}
-
-{% block extra_script %}
-    <script src="{% static 'js/accounts.js' %}"></script>
 {% endblock %}
