@@ -79,9 +79,10 @@ TEMPLATES = [
 
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.instagram.InstagramOAuth2',
     'social_core.backends.github.GithubOAuth2',
-    'social_core.backends.google.GoogleOAuth2',
-    'social_core.backends.twitter.TwitterOAuth',
+    #'social_core.backends.google.GoogleOAuth2',
+    #'social_core.backends.twitter.TwitterOAuth',
     'django.contrib.auth.backends.ModelBackend'
 )
 
@@ -186,6 +187,15 @@ SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [
     ('link', 'profile_url'),
 ]
 
+# instagram
+SOCIAL_AUTH_INSTAGRAM_KEY = ''
+SOCIAL_AUTH_INSTAGRAM_SECRET = ''
+SOCIAL_AUTH_INSTAGRAM_EXTRA_DATA = [('user', 'user'),]
+
+# github
+SOCIAL_AUTH_GITHUB_KEY = ''
+SOCIAL_AUTH_GITHUB_SECRET = ''
+
 WEBSITE_URL = 'http://localhost:8000'
 WEBSITE_TITLE = 'Demo Shopping site'
 WEBSITE_DESCRIPTION = 'This is a demo shopping site, built with Django & Bootstrap.'
@@ -197,4 +207,3 @@ try:
     print('import EMAIL_HOST_USER from settings_local:', settings_local)
 except:
     pass
-
