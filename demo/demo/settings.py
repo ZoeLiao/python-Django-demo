@@ -79,9 +79,10 @@ TEMPLATES = [
 
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.facebook.FacebookOAuth2',
-    'social_core.backends.github.GithubOAuth2',
-    'social_core.backends.google.GoogleOAuth2',
-    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.instagram.InstagramOAuth2',
+    #'social_core.backends.github.GithubOAuth2',
+    #'social_core.backends.google.GoogleOAuth2',
+    #'social_core.backends.twitter.TwitterOAuth',
     'django.contrib.auth.backends.ModelBackend'
 )
 
@@ -185,6 +186,11 @@ SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [
     ('picture', 'picture'),
     ('link', 'profile_url'),
 ]
+
+# instagram
+SOCIAL_AUTH_INSTAGRAM_KEY = ''
+SOCIAL_AUTH_INSTAGRAM_SECRET = ''
+SOCIAL_AUTH_INSTAGRAM_EXTRA_DATA = [('user', 'user'),]
 
 WEBSITE_URL = 'http://localhost:8000'
 WEBSITE_TITLE = 'Demo Shopping site'

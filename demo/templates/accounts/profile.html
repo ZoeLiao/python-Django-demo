@@ -13,9 +13,12 @@
             </div>
             <div class="card-body px-5">
                 {% for ass in backends.associated %}
-                    {% if ass.provider == 'facebook' %}
                     <div class="text-center mb-3">
-                        <img src="{{ass.extra_data.picture.data.url}}" alt="" width="180" height="180" style="border-radius: 50%">
+                        {% if ass.provider == 'facebook' %}
+                        <img src="{{ ass.extra_data.picture.data.url }}" alt="" width="180" height="180" style="border-radius: 50%">
+                        {% elif ass.provider == 'instagram' %}
+                        <img src="{{ ass.extra_data.user.profile_picture }}" alt="" width="180" height="180" style="border-radius: 50%">
+                        {% endif %}
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-lg-6 col-xl-6">
@@ -31,7 +34,11 @@
                             <p>Name:</p>
                         </div>
                         <div class="col-md-6 col-lg-6 col-xl-6">
+                        {% if ass.provider == 'facebook' %}
                             <p>{{ ass.extra_data.name }}</p>
+                        {% elif ass.provider == 'instagram' %}
+                            <p>{{ ass.extra_data.user.full_name }}</p>
+                        {% endif %}
                         </div>
                     </div>
 
@@ -40,10 +47,13 @@
                             <p>Url:</p>
                         </div>
                         <div class="col-md-6 col-lg-6 col-xl-6">
+                        {% if ass.provider == 'facebook' %}
                             <a href="{{ass.extra_data.profile_url}}" class="demo-link demo-text-black">link</a>
+                        {% elif ass.provider == 'instagram' %}
+                            <a href="https://instagram.com/{{ ass.username }}" class="demo-link demo-text-black">link</a>
+                        {% endif %}
                         </div>
                     </div>
-                    {% endif %}
                 {% endfor %}
 
                 <button class="btn btn-danger mt-3" onclick="window.location.href='{% url 'signout' %}'">Sign Out</button>
