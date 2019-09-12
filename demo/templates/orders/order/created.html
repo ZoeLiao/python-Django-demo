@@ -1,7 +1,8 @@
 {% extends "shop/base.html" %}
+{% load i18n %}
 
 {% block title %} 
-Thank You
+    {% trans "Thank You" %}
 {% endblock %}
 
 {% block content %}
@@ -10,11 +11,11 @@ Thank You
         <h1>Thank you</h1>
     </div>
     <div class="p-2">
-        <p>Your order has been successfully complete. Your order numberis <strong>{{ order.id }}</strong>.</p>
+        <p>{% trans "Your order has been successfully complete. Your order numberis" %} <strong>{{ order.id }}</strong>{% trans "." %}</p>
     </div>
     <div class="p-2">
         <div id="fb-root"></div>
-        <div class="fb-share-button" data-href="{{ WEBSITE_URL }}" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+        <div class="fb-share-button" data-href="{{ WEBSITE_URL }}" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">{% trans "Share" %}</a></div>
     </div>
 {% endblock %}
 

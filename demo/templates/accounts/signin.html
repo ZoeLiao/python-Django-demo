@@ -1,31 +1,32 @@
 {% extends "shop/base.html" %}
+{% load i18n %}
 {% load static %}
 
 {% block title %}
-    Signin
+    {% trans "Sign In" %}
 {% endblock %}
 {% block content %}
 <div class="container-fluid px-5 mt-5 text-center">
     <div class="d-flex justify-content-center mt-4">
         <div class="card text-center">
             <div class="card-header">
-                <h3>Sing In</h3>
+                <h3>{% trans "Sign In" %}</h3>
             </div>
             <div class="card-body px-5 mt-3">
                 <h5 class="card-title">
                 <div>
                     <button class="btn btn-primary mb-2">
-                        <a class="demo-link demo-text-white" href="{% url 'social:begin' 'facebook' %}">Sign in with Facebook</a>
+                        <a class="demo-link demo-text-white" href="{% url 'social:begin' 'facebook' %}">{% trans "Sign in with Facebook" %}</a>
                     </button>
                 </div>
                 <div>
                     <button class="btn btn-danger mb-2">
-                        <a class="demo-link demo-text-white" href="{% url 'social:begin' 'instagram' %}">Sign in with Instagram</a>
+                        <a class="demo-link demo-text-white" href="{% url 'social:begin' 'instagram' %}">{% trans "Sign in with Instagram" %}</a>
                     </button>
                 </div>
                 <div>
                     <button class="btn btn-info mb-2">
-                        <a class="demo-link demo-text-white" href="{% url 'social:begin' 'github' %}">Sign in with Github</a>
+                        <a class="demo-link demo-text-white" href="{% url 'social:begin' 'github' %}">{% trans "Sign in with Github" %}</a>
                     </button>
                 </div>
             </div>

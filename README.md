@@ -9,14 +9,13 @@
 - Techniques & tools for building the demo website:
     - Backend:
         - [Django](https://www.djangoproject.com/)
-            - social-auth-app-django 
+            - social-auth-app-django (Facebook, Instagram, Github)
             - session
             - form
             - email
             - management
-            - i18n (TODO)
+            - i18n
             - test (TODO: finish)
-            - management
         - [Celery](http://www.celeryproject.org/)
             - [flower](https://flower.readthedocs.io/en/latest/)
         - [AGINX](https://nginx.org/en/) (TODO)
@@ -25,7 +24,7 @@
         - [Bootstrap 4.3](https://getbootstrap.com/)
     - Database:
         - [SQLite](https://www.sqlite.org/index.html)
-        - [redis](https://redis.io/)
+        - [Redis](https://redis.io/)
     - Cloud platform:
         - [AWS](https://aws.amazon.com/tw/) (TODO)
 - Reference:
@@ -81,3 +80,7 @@
 
 ## Test
 - `python manage.py test <app_name>.tests`
+
+## i18n
+- python manage.py makemessages -l zh_TW
+- python manage.py compilemessages

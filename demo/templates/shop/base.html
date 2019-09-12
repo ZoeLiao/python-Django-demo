@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,22 +55,22 @@
 				<ul class="navbar-nav mr-auto">
 {{ request.name }}
 					<li class="nav-item {% if request.resolver_match.url_name == 'homepage' %}active{% endif %}">
-						<a class="nav-link" href="/">Home</a>
+                        <a class="nav-link" href="/">{% trans "Home" %}</a>
 					</li>
 					<li class="nav-item {% if request.resolver_match.url_name == 'profile' %}active{% endif %}">
-						<a class="nav-link" href="/accounts/profile/">My Account</a>
+                        <a class="nav-link" href="/accounts/profile/">{% trans "My Account" %}</a>
 					</li>
 					{% with total_items=cart|length %}
 					<li class="nav-item {% if request.resolver_match.url_name == 'cart_detail' %}active{% endif %}">
-						<a class="nav-link" href="/cart/">Cart{% if  total_items  != 0 %}<input type="button" value="{{ total_items }}" class="btn btn-outline-info btn-sm ml-1 cart-button">{% endif %}{% if request.resolver_match.url_name == 'cart_list' %}{% endif %}</a>
+                        <a class="nav-link" href="/cart/">{% trans "Cart" %}{% if  total_items  != 0 %}<input type="button" value="{{ total_items }}" class="btn btn-outline-info btn-sm ml-1 cart-button">{% endif %}{% if request.resolver_match.url_name == 'cart_list' %}{% endif %}</a>
 					</li>
 					{% endwith %}
 				</ul>
 
                 <!-- search by google -->
                 <form class="form-inline my-2 my-lg-0" action="http://google.com/search" target="_blank">
-					<input class="form-control mr-sm-2" name="q" type="search" placeholder="Search" aria-label="Search">
-					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <input class="form-control mr-sm-2" name="q" type="search" placeholder="{% trans 'Search' %}" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">{% trans "Search" %}</button>
 				</form>
                 <!--/ search by google -->
 

@@ -1,0 +1,214 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-12 13:25+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: templates/accounts/profile.html:6 templates/accounts/profile.html:13
+#: templates/shop/base.html:61
+msgid "My Account"
+msgstr "我的帳號"
+
+#: templates/accounts/profile.html:30
+msgid "Source"
+msgstr "來源"
+
+#: templates/accounts/profile.html:39
+msgid "Name"
+msgstr "用戶名"
+
+#: templates/accounts/profile.html:54
+msgid "Url"
+msgstr "連結"
+
+#: templates/accounts/profile.html:58 templates/accounts/profile.html:60
+#: templates/accounts/profile.html:62
+msgid "link"
+msgstr "連結"
+
+#: templates/accounts/profile.html:68
+msgid "Sign Out"
+msgstr "登出"
+
+#: templates/accounts/signin.html:6 templates/accounts/signin.html:13
+msgid "Sign In"
+msgstr "登入"
+
+#: templates/accounts/signin.html:19
+msgid "Sign in with Facebook"
+msgstr "用 Facebook 登入"
+
+#: templates/accounts/signin.html:24
+msgid "Sign in with Instagram"
+msgstr "用 Instagram 登入"
+
+#: templates/accounts/signin.html:29
+msgid "Sign in with Github"
+msgstr "用 Github 登入"
+
+#: templates/cart/detail.html:10 templates/shop/base.html:65
+msgid "Cart"
+msgstr "購物車"
+
+#: templates/cart/detail.html:19
+msgid "Image"
+msgstr "圖片"
+
+#: templates/cart/detail.html:20
+msgid "Product"
+msgstr "商品"
+
+#: templates/cart/detail.html:21
+msgid "Quantity"
+msgstr "數量"
+
+#: templates/cart/detail.html:22
+msgid "Remove"
+msgstr "刪除"
+
+#: templates/cart/detail.html:23
+msgid "Unit Price"
+msgstr "單價"
+
+#: templates/cart/detail.html:24
+msgid "Price"
+msgstr "價格"
+
+#: templates/cart/detail.html:67
+msgid "Continue shopping"
+msgstr "繼續購物"
+
+#: templates/cart/detail.html:68 templates/orders/order/create.html:10
+#: templates/orders/order/create.html:15
+msgid "Checkout"
+msgstr "結帳"
+
+#: templates/orders/order/create.html:21
+msgid "Information"
+msgstr "資料"
+
+#: templates/orders/order/create.html:38
+msgid "Your Order"
+msgstr "您的訂單"
+
+#: templates/orders/order/create.html:53
+msgid "Total"
+msgstr "總計"
+
+#: templates/orders/order/created.html:5
+msgid "Thank You"
+msgstr "謝謝您"
+
+#: templates/orders/order/created.html:14
+msgid "Your order has been successfully complete. Your order numberis"
+msgstr "您的訂單已經完成，訂單號碼是："
+
+#: templates/orders/order/created.html:14
+msgid "."
+msgstr "。"
+
+#: templates/orders/order/created.html:18
+msgid "Share"
+msgstr "分享"
+
+#: templates/shop/base.html:58
+msgid "Home"
+msgstr "首頁"
+
+#: templates/shop/base.html:72 templates/shop/base.html:73
+msgid "Search"
+msgstr "搜尋"
+
+#: templates/shop/carousel.html:15
+msgid "This is a demo shopping site"
+msgstr "這是一個用來 demo 的購物網站"
+
+#: templates/shop/carousel.html:21
+msgid "Product Categories for selling"
+msgstr "商品種類"
+
+#: templates/shop/carousel.html:22
+msgid "Bags with blue, pink, yellow and green"
+msgstr "不同顏色的袋子"
+
+#: templates/shop/carousel.html:28
+msgid "Products"
+msgstr "商品"
+
+#: templates/shop/carousel.html:29
+msgid "Blue, pink, yellow, and green bags contain different letters"
+msgstr "不同顏色不同字母的袋子"
+
+#: templates/shop/homepage.html:6
+msgid "Homepage"
+msgstr "首頁"
+
+#: templates/shop/homepage.html:16
+msgid "Techniques & Tools"
+msgstr "技術 & 工具"
+
+#: templates/shop/homepage.html:20
+msgid "Backend - Django"
+msgstr "後端 - Django"
+
+#: templates/shop/homepage.html:24
+msgid "Frontend - Bootstrap"
+msgstr "前端 - Bootstrap"
+
+#: templates/shop/homepage.html:28
+msgid "Database - SQLite"
+msgstr "資料庫 - SQLite"
+
+#: templates/shop/homepage.html:32
+msgid "Cache - Redis"
+msgstr "緩存 - Redis"
+
+#: templates/shop/homepage.html:36
+msgid "Sending emails - Celery"
+msgstr "寄信 - Celery"
+
+#: templates/shop/homepage.html:40
+msgid "Sign in - third-party"
+msgstr "登入 - 第三方"
+
+#: templates/shop/homepage.html:44
+msgid "Sharing - Facebook"
+msgstr "分享 - Facebook"
+
+#: templates/shop/homepage.html:48
+msgid "Source Code"
+msgstr "原始碼"
+
+#: templates/shop/homepage.html:57
+msgid "About"
+msgstr ""
+
+#: templates/shop/homepage.html:58
+msgid ""
+"This is a demo shopping site, you can sign in in with social media accounts,"
+"<br> add goods to your cart, and receive an email after checking out."
+msgstr ""
+"這是一個用來 demo 的購物網站，你可以用第三方登入、<br>將商品加入購物車、並在"
+"結帳後收到一封訂單確認電子郵件"
+
+#: templates/shop/homepage.html:66
+msgid "Categories"
+msgstr "種類"
+
+#: templates/shop/homepage.html:129
+msgid "Demo Map"
+msgstr ""
