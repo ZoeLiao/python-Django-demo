@@ -5,8 +5,20 @@ Thank You
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid px-5 mt-5">
-    <h1>Thank you</h1>
-    <p>Your order has been successfully complete. Your order numberis <strong>{{ order.id }}</strong>.</p>
-</div>
+<div class="d-flex flex-column justify-content-center px-5 mt-5">
+    <div class="p-2">
+        <h1>Thank you</h1>
+    </div>
+    <div class="p-2">
+        <p>Your order has been successfully complete. Your order numberis <strong>{{ order.id }}</strong>.</p>
+    </div>
+    <div class="p-2">
+        <div id="fb-root"></div>
+        <div class="fb-share-button" data-href="{{ WEBSITE_URL }}" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+    </div>
+{% endblock %}
+
+{% block extra_script %}
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v4.0"></script>
 {% endblock %}
