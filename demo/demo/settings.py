@@ -187,6 +187,9 @@ SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [
 ]
 
 WEBSITE_URL = 'http://localhost:8000'
+WEBSITE_TITLE = 'Demo Shopping site'
+WEBSITE_DESCRIPTION = 'This is a demo shopping site, built with Django & Bootstrap.'
+WEBSITE_AUTHOR = 'ZoeLiao'
 
 try:
     # import email information

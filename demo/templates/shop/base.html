@@ -10,6 +10,31 @@
         <link href="{% static 'css/base.css' %}" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="icon" href="{% static 'images/logo.png' %}">
+
+        <!-- Facebook -->
+        <meta property="og:url" content="{{ WEBSITE_URL }}" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="{{ WEBSITE_TITLE }}"/>
+        <meta property="og:description" content="{{ WEBSITE_DESCRIPTION }}"/>
+        <meta property="og:image" content="{% static 'images/logo.png' %}"/>
+        <!--/ Facebook -->
+
+        <!-- Schema.org markup for Google+ -->
+        <meta itemprop="name" content="{{ WEBSITE_TITLE }}">
+        <meta itemprop="description" content="{{ WEB_DESCRIPTION }}">
+        <meta itemprop="image" content="{% static 'images/logo.png' %}">
+        <!--/ Schema.org markup for Google+ -->
+
+        <!-- Twitter Card data -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@ZoeLiao">
+        <meta name="twitter:title" content="{{ WEBSITE_TITLE }}">
+        <meta name="twitter:description" content="{{ WEBSITE_DESCRIPTION }}">
+        <meta name="twitter:creator" content="{{ WEBSITE_AUTHOR }}">
+        <!-- Twitter summary card with large image must be at least 280x150px -->
+        <meta name="twitter:image:src" content="{% static 'images/logo.png' %}">
+        <!--/ Twitter Card data -->
+
         {% block extra_style_sheet %}
         {% endblock %}
     </head>
@@ -40,10 +65,14 @@
 					</li>
 					{% endwith %}
 				</ul>
-				<form class="form-inline my-2 my-lg-0">
-					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+
+                <!-- search by google -->
+                <form class="form-inline my-2 my-lg-0" action="http://google.com/search" target="_blank">
+					<input class="form-control mr-sm-2" name="q" type="search" placeholder="Search" aria-label="Search">
 					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 				</form>
+                <!--/ search by google -->
+
 			</div>
 		</div>
     </nav>
@@ -66,6 +95,9 @@
     <script src="{% static 'js/base.js' %}"></script>
 
     {% block extra_script %}{% endblock %}
+    <script>
+        {% block extra_js %}{% endblock %}
+    </script>
 </body>
 
 </html>
