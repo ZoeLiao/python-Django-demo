@@ -1,12 +1,12 @@
 # python-Django-demo
 - [中文 (Traditional Chinese)](https://github.com/ZoeLiao/python-Django-demo/blob/master/README.zh-TW.md)
-- Use Django to build a online shopping site.
+- Use Django to build an online demo shopping site.
 - Functions:
     - Basic shopping site
-    - Loggin in with social media accounts
-    - Use session to record user's order
+    - Able to sign in with social media accounts
+    - Use session to record user's cart
     - Sending email by Celery + Redis + Gmail
-- Techniques for building the demo website:
+- Techniques & tools for building the demo website:
     - Backend:
         - [Django](https://www.djangoproject.com/)
             - social-auth-app-django 
@@ -15,7 +15,7 @@
             - email
             - management
             - i18n (TODO)
-            - test (TODO)
+            - test (TODO: finish)
             - management
         - [Celery](http://www.celeryproject.org/)
             - [flower](https://flower.readthedocs.io/en/latest/)
@@ -32,19 +32,18 @@
     - [shopping site (中文)](https://kknews.cc/zh-tw/code/pe9o3x8.html)
     - [Loggin in with social media accounts](https://scotch.io/tutorials/django-authentication-with-facebook-instagram-and-linkedin)
 
-## Start project
-- `python3 -m venv venv`
-- `django-admin startproject <project_name>`
-- `django-admin startapp <app_name>`
-
 ## Set Up
-- `virtualenv venv`
+- `python3 -m venv venv`
 - `. venv/bin/activate`
 - `pip install -r requirements.txt`
 - `cd demo`
 - `export PYTHONPATH=$PWD`
 - `python manage.py migrate`
 - `python manage.py createsuperuser`
+
+## Start app
+- If you want to add a new funtion:
+    - `django-admin startapp <app_name>`
 
 ## Migrate Database
 - In general cases:
@@ -53,9 +52,10 @@
 - Failed to detect changes:
     - Run the command of [Management - Delete the data of specific app](https://github.com/ZoeLiao/python-Django-demo#management)
     - fake:
+        - Tells Django to mark the migrations as having been applied or unapplied, but without actually running the SQL to change your database schema
         - `python manage.py makemigrations <app_name>`
         - `python manage.py migrate --fake`
-    - remigrate:
+    - migrate:
         - `python manage.py makemigrations <app_name>`
         - `python manage.py migrate`
 
@@ -64,7 +64,7 @@
     - `python manage.py manual_migration <app_name>`
     - ex: `python manage.py manual_migration shop`
 
-## Send email
+## Send emails
 - Create settings_local.py by `vim demo/settings_local.py` (settings_local.py is an ignored file)
 - Input your email information in settings_local.py:
     - `EMAIL_HOST = 'smtp.gmail.com'`
