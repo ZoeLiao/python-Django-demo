@@ -11,3 +11,4 @@ class CategoryTestCase(TestCase):
     def test_get_category(self):
         green_package = Category.objects.get(name=self.name)
         self.assertEqual(green_package.slug, self.slug)
+        print('test_get_category')

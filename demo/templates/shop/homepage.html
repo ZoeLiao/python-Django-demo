@@ -1,6 +1,10 @@
 {% extends "shop/base.html" %}
 {% load static %}
 
+{% block title %}
+    Homepage
+{% endblock %}
+
 {% block content %}
 
 {% include "shop/carousel.html" %}
@@ -28,11 +32,11 @@
             </div>
             <div class="col-3">
                 <img src="{% static 'images/Celery.jpg' %}" width="80%" height="80%">
-                <p class="lead mt-2">Send email by Celery</p>
+                <p class="lead mt-2">Send emails by Celery</p>
             </div>
             <div class="col-3">
                 <img src="{% static 'images/facebook.png' %}" width="80%" height="80%">
-                <p class="lead mt-2">login with social media accounts</p>
+                <p class="lead mt-2">Sign in with social media accounts</p>
             </div>
         </div>
     </div>
@@ -43,11 +47,12 @@
 <div class="jumbotron jumbotron-fluid mt-5 text-center">
     <div class="container">
         <h1 class="display-1">About</h1>
-        <p class="lead">This is a demo website, you can login in with social media accounts,<br> add goods to your cart, and receive an email after checking out.</p>
+        <p class="lead">This is a demo shopping site, you can sign in in with social media accounts,<br> add goods to your cart, and receive an email after checking out.</p>
     </div>
 </div>
 <!--/ jumbotron - About -->
 
+<!-- categories -->
 <div class="container-fluid px-5 mt-5">
     <div class="mt-5 text-center">
         <h1 class="display-4">Categories</h1>
@@ -78,9 +83,10 @@
         <button class="btn btn-info" onclick="window.location.href='/list/'">See More</button>
     </div>
 </div>
+<!-- categories -->
 
 <!-- jumbotron - Contact Me -->
-<div class="jumbotron jumbotron-fluid mt-5 text-center demo-blue">
+<div class="jumbotron jumbotron-fluid mt-5 text-center demo-blue padding-bottom-sm">
     <div class="container">
         <h1 class="display-5">Contact Me</h1>
         <div class="row mt-4">
@@ -99,7 +105,7 @@
                     <img src="{% static 'images/netlify.png' %}" width="50%" height="60%">
                 </a>
             </div>
-            <div class="col-3" title="blog">
+            <div class="col-3" title="email">
                 <a href="mailto:zoejoyuliao@gmail.com">
                     <img src="{% static 'images/mail.png' %}" width="50%" height="60%">
                 </a>
@@ -119,4 +125,3 @@
 </div>
 <!--/ Demo Map -->
 {% endblock %}
-
