@@ -68,6 +68,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'cart.context_processors.cart',
+                'shop.context_processors.meta',
                 # for logout
                 'social_django.context_processors.backends',
                 'social_django.context_processors.login_redirect',
@@ -184,6 +185,8 @@ SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [
     ('picture', 'picture'),
     ('link', 'profile_url'),
 ]
+
+WEBSITE_URL = 'http://localhost:8000'
 
 try:
     # import email information
