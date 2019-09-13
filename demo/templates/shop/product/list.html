@@ -1,4 +1,5 @@
 {% extends "shop/base.html" %}
+{% load i18n %}
 {% load static %}
 
 {% block extra_style_sheet %}
@@ -18,10 +19,10 @@
         <div class="row">
             <div class="col-md-3 col-lg-3 col-xl-3">
                 <div class="sidebar_nav px-3 py-2">
-                    <h3>Categories</h3>
+                    <h3>{% trans "Categories" %}</h3>
                     <ul>
                         <li {% if not category %} class="selected" {% endif %}>
-                            <a href="{% url 'shop:product_list' %}" {% if category.slug != c.slug %}class="demo-link demo-text-black"{% endif %}>All</a>
+                            <a href="{% url 'shop:product_list' %}" {% if category.slug != c.slug %}class="demo-link demo-text-black"{% endif %}>{% trans "All" %}</a>
                         </li>
                         {% for c in categories %}
                         <li {% if category.slug == c.slug %} class="selected" {% else %}{% endif %}>
@@ -38,10 +39,10 @@
                         {% if category %}
                             {{ category.name }}
                         {% else %}
-                            Products
+                            {% trans "Products" %}
                         {% endif %}
                     </h1>
-                    <div class="row">
+                    <div class="row mt-4">
                     {% if not products %}
                         <div class="col-md-4 col-lg-4 col-xl-4">
                             <div class="card">
