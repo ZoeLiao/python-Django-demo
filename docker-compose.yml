@@ -12,10 +12,10 @@ services:
       - "80:80"
     volumes:
       # linux
-      #- .:/log:/var/log/nginx
       - api_data:/docker_api
+      - ./log:/var/log/nginx
       # mac
-      - /usr/local/etc/nginx/
+      #- /usr/local/etc/nginx/
     depends_on:
       - web
 

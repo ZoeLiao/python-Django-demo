@@ -8,6 +8,7 @@
     - Use session to record user's cart
     - Sending email by Celery + Redis + Gmail
     - Internationalization
+    - Deploy: AWS + Docker + uWSGI + Nginx
 - Techniques & tools for building the demo website:
     - Backend:
         - [Django (2.2)](https://www.djangoproject.com/)
@@ -20,7 +21,8 @@
             - test (TODO: finish)
         - [Celery](http://www.celeryproject.org/)
             - [flower](https://flower.readthedocs.io/en/latest/)
-        - [AGINX](https://nginx.org/en/) (TODO)
+        - [Docker](https://www.docker.com/)
+        - [AGINX](https://nginx.org/en/)
         - [Jenkins](https://jenkins.io/zh/) (TODO)
     - Frontend:
         - [Bootstrap (4.3)](https://getbootstrap.com/)
@@ -97,8 +99,14 @@
 - Run: `docker-compose up`
 - Remove: `docker-compose down -v`
 - docker system prune (-f)
+- AWS:
+    - `docker-compose up -d`
+    - `sudo usermod -a -G docker $USER`
+    - sign out and sign in again
+    - `sudo service docker start`
 
 ## Deploy
 - `python manage.py collectstatic`
-- If no apt-get: `mkdir /etc/nginx/sites-available/`
+- No apt-get: `mkdir /etc/nginx/sites-available/`
 - `docker-compose up --build`
+- `python manage.py migrate`
