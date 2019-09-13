@@ -25,7 +25,7 @@ SECRET_KEY = '$qp)529=u5epsyza#s)!rne8+p1-)n3)2+7awvy0wz&_h$b0d3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -154,10 +154,6 @@ SESSION_COOKIE_AGE = 144000  # (24 hr)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-# 開發階段放置自己的靜態文件
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-# 執行 collectatic 後會將項目中的靜態文件收集到此目錄下
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Media
 MEDIA_URL = '/media/'
@@ -222,5 +218,11 @@ try:
     # import email information
     from demo.settings_local import *
     print('import EMAIL_HOST_USER from settings_local:', settings_local)
+
+    DOCKER_DOMAIN = os.environ.get('DOCKER_DOMAIN')
+    if DOCKER_DOMAIN == 'prod':
+        from demo.settings_prod import *
+    else:
+        from demo.settings_dev import *
 except:
     pass

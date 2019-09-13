@@ -66,6 +66,9 @@
     - `python manage.py manual_migration <app_name>`
     - ex: `python manage.py manual_migration shop`
 
+## Static files
+- `python manage.py collectstatic`
+
 ## Send emails
 - Create settings_local.py by `vim demo/settings_local.py` (settings_local.py is an ignored file)
 - Input your email information in settings_local.py:
@@ -94,3 +97,8 @@
 - Run: `docker-compose up`
 - Remove: `docker-compose down -v`
 - docker system prune (-f)
+
+## Deploy
+- `python manage.py collectstatic`
+- If no apt-get: `mkdir /etc/nginx/sites-available/`
+- `docker-compose up --build`
