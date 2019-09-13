@@ -101,3 +101,11 @@
     display: block;
     width: 100%;
 }
+
+.min-height-30 {
+    min-height: 30vh;
+}
+
+.min-height-60 {
+    min-height: 60vh;
+}
