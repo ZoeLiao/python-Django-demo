@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 02:03+0000\n"
+"POT-Creation-Date: 2019-09-13 06:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,7 +25,7 @@ msgstr "繁體中文"
 #: templates/accounts/profile.html:6 templates/accounts/profile.html:13
 #: templates/shop/base.html:61
 msgid "My Account"
-msgstr "我的帳號"
+msgstr "我的帳戶"
 
 #: templates/accounts/profile.html:30
 msgid "Source"
@@ -68,6 +68,12 @@ msgstr "用 Github 登入"
 msgid "Cart"
 msgstr "購物車"
 
+#: templates/cart/detail.html:15
+#, fuzzy
+#| msgid "Continue shopping"
+msgid "Your shopping cart"
+msgstr "繼續購物"
+
 #: templates/cart/detail.html:19
 msgid "Image"
 msgstr "圖片"
@@ -80,7 +86,7 @@ msgstr "商品"
 msgid "Quantity"
 msgstr "數量"
 
-#: templates/cart/detail.html:22
+#: templates/cart/detail.html:22 templates/cart/detail.html:52
 msgid "Remove"
 msgstr "刪除"
 
@@ -91,6 +97,10 @@ msgstr "單價"
 #: templates/cart/detail.html:24
 msgid "Price"
 msgstr "價格"
+
+#: templates/cart/detail.html:46
+msgid "Update"
+msgstr "更新"
 
 #: templates/cart/detail.html:67
 msgid "Continue shopping"
@@ -107,7 +117,7 @@ msgstr "資料"
 
 #: templates/orders/order/create.html:27
 msgid "Place order"
-msgstr ""
+msgstr "下訂單"
 
 #: templates/orders/order/create.html:38
 msgid "Your Order"
@@ -141,7 +151,7 @@ msgstr "首頁"
 msgid "Language"
 msgstr "語言"
 
-#: templates/shop/base.html:81 templates/shop/base.html:82
+#: templates/shop/base.html:96 templates/shop/base.html:97
 msgid "Search"
 msgstr "搜尋"
 
@@ -157,7 +167,7 @@ msgstr "商品種類"
 msgid "Bags with blue, pink, yellow and green"
 msgstr "不同顏色的袋子"
 
-#: templates/shop/carousel.html:28
+#: templates/shop/carousel.html:28 templates/shop/product/list.html:42
 msgid "Products"
 msgstr "商品"
 
@@ -207,7 +217,7 @@ msgstr "原始碼"
 
 #: templates/shop/homepage.html:57
 msgid "About"
-msgstr ""
+msgstr "關於"
 
 #: templates/shop/homepage.html:58
 msgid ""
@@ -215,12 +225,24 @@ msgid ""
 "<br> add goods to your cart, and receive an email after checking out."
 msgstr ""
 "這是一個用來 demo 的購物網站，你可以用第三方登入、<br>將商品加入購物車、並在"
-"結帳後收到一封訂單確認電子郵件"
+"提交結帳資料後收到一封訂單確認電子郵件"
 
-#: templates/shop/homepage.html:66
+#: templates/shop/homepage.html:66 templates/shop/product/list.html:22
 msgid "Categories"
 msgstr "種類"
+
+#: templates/shop/homepage.html:91
+msgid "See More"
+msgstr "查看更多"
 
 #: templates/shop/homepage.html:129
 msgid "Demo Map"
 msgstr "Demo 地圖"
+
+#: templates/shop/product/detail.html:42
+msgid "Add to cart"
+msgstr "加到購物車"
+
+#: templates/shop/product/list.html:25
+msgid "All"
+msgstr "全部"

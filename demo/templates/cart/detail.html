@@ -12,7 +12,7 @@
 
 {% block content %}
 <div class="container-fluid px-5 mt-5">
-    <h1>Your shopping cart</h1>
+    <h1>{% trans "Your shopping cart" %}</h1>
     <table class="table table-responsive table-hover mt-3">
         <thead>
             <tr class="table-Warning">
@@ -43,13 +43,13 @@
                                     {{ item.update_quantity_form.update }}
                                 </div>
                                 <div class="input-group-append mr-auto">
-                                    <input type="submit" value="update" class="btn btn-info btn-sm">
+                                    <input type="submit" value="{% trans 'Update' %}" class="btn btn-info btn-sm">
                                 </div>
                             </div>
                             {% csrf_token %}
                         </form>
                     </td>
-                    <td><input onclick="window.location.href='{% url "cart:cart_remove" product.id %}'" type="button" class="btn btn-danger" value="Remove"></td>
+                    <td><input onclick="window.location.href='{% url "cart:cart_remove" product.id %}'" type="button" class="btn btn-danger" value="{% trans 'Remove' %}"></td>
                     <td>{{ item.price }}</td>
                     <td>{{ item.total_price }}</td>
                 </tr>

@@ -1,4 +1,5 @@
 {% extends "shop/base.html" %}
+{% load i18n %}
 {% load static %}
 
 {% block extra_style_sheet %}
@@ -38,7 +39,7 @@
                                     {{ cart_product_form.quantity }}
                                 </div>
                                 <div class="input-group-append mr-auto mb-3">
-                                    <input type="submit" value="Add to cart" class="btn btn-info btn-sm">
+                                    <input type="submit" value="{% trans 'Add to cart' %}" class="btn btn-info btn-sm">
                                 </div>
                             </div>
                         </form>
