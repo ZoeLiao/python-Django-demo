@@ -1,0 +1,41 @@
+version: '3'
+
+services:
+  redis:
+    image: "redis:alpine"
+
+  nginx:
+    container_name: nginx-container
+    build: ./nginx
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      # linux
+      #- .:/log:/var/log/nginx
+      - api_data:/docker_api
+      # mac
+      - /usr/local/etc/nginx/
+    depends_on:
+      - web
+
+  web:
+    container_name: api-container
+    build: ./demo
+    restart: always
+    command: uwsgi --ini uwsgi.ini
+    volumes:
+      - api_data:/docker_api
+    depends_on:
+      - redis 
+
+  migration_and_run_worker:
+    container_name: celery
+    build: ./demo
+    volumes:
+      - api_data:/docker_api
+    command: bash -c "python manage.py migrate && celery -A demo worker -l info"
+    depends_on:
+      - redis
+volumes:
+  api_data:

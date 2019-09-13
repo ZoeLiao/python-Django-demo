@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 06:28+0000\n"
+"POT-Creation-Date: 2019-09-13 06:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -69,10 +69,8 @@ msgid "Cart"
 msgstr "購物車"
 
 #: templates/cart/detail.html:15
-#, fuzzy
-#| msgid "Continue shopping"
 msgid "Your shopping cart"
-msgstr "繼續購物"
+msgstr "您的購物車"
 
 #: templates/cart/detail.html:19
 msgid "Image"
@@ -234,6 +232,10 @@ msgstr "種類"
 #: templates/shop/homepage.html:91
 msgid "See More"
 msgstr "查看更多"
+
+#: templates/shop/homepage.html:99
+msgid "Contact Me"
+msgstr "聯繫我"
 
 #: templates/shop/homepage.html:129
 msgid "Demo Map"

@@ -8,6 +8,6 @@ language: python
 python:
   - "3.6"
 install:
-  - pip install --no-cache-dir -r requirements.txt
+  - pip install --no-cache-dir -r demo/requirements.txt
 script:
   - python demo/manage.py test shop.tests
