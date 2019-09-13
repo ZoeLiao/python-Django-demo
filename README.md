@@ -1,14 +1,16 @@
 # python-Django-demo
-- [中文 (Traditional Chinese)](https://github.com/ZoeLiao/python-Django-demo/blob/master/README.zh-TW.md)
+![demo_homepgae_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_homepage_en.png)
+- [繁體中文 (Traditional Chinese)](https://github.com/ZoeLiao/python-Django-demo/blob/master/README.zh-TW.md)
 - Use Django to build an online demo shopping site.
 - Functions:
     - Basic shopping site
-    - Able to sign in with social media accounts
+    - Able to sign in with third-party accounts (Facebook, Instagram, Github)
     - Use session to record user's cart
     - Sending email by Celery + Redis + Gmail
+    - Internationalization
 - Techniques & tools for building the demo website:
     - Backend:
-        - [Django](https://www.djangoproject.com/)
+        - [Django (2.2)](https://www.djangoproject.com/)
             - social-auth-app-django (Facebook, Instagram, Github)
             - session
             - form
@@ -21,9 +23,10 @@
         - [AGINX](https://nginx.org/en/) (TODO)
         - [Jenkins](https://jenkins.io/zh/) (TODO)
     - Frontend:
-        - [Bootstrap 4.3](https://getbootstrap.com/)
+        - [Bootstrap (4.3)](https://getbootstrap.com/)
     - Database:
         - [SQLite](https://www.sqlite.org/index.html)
+    - Cache:
         - [Redis](https://redis.io/)
     - Cloud platform:
         - [AWS](https://aws.amazon.com/tw/) (TODO)
@@ -31,7 +34,7 @@
     - [shopping site (中文)](https://kknews.cc/zh-tw/code/pe9o3x8.html)
     - [Loggin in with social media accounts](https://scotch.io/tutorials/django-authentication-with-facebook-instagram-and-linkedin)
 
-## Set Up
+## Set up
 - `python3 -m venv venv`
 - `. venv/bin/activate`
 - `pip install -r requirements.txt`
@@ -40,11 +43,11 @@
 - `python manage.py migrate`
 - `python manage.py createsuperuser`
 
-## Start app
+## Start an app
 - If you want to add a new funtion:
     - `django-admin startapp <app_name>`
 
-## Migrate Database
+## Migrate database
 - In general cases:
     - `python manage.py makemigrations`
     - `python manage.py migrate`
@@ -82,5 +85,5 @@
 - `python manage.py test <app_name>.tests`
 
 ## i18n
-- `python manage.py makemessages -l zh_TW`
+- `python manage.py makemessages -l zh_Hant`
 - `python manage.py compilemessages`
