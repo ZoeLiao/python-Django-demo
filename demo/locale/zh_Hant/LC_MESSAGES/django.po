@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-12 13:25+0000\n"
+"POT-Creation-Date: 2019-09-13 02:03+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: demo/settings.py:142
+msgid "Traditional Chinese"
+msgstr "繁體中文"
 
 #: templates/accounts/profile.html:6 templates/accounts/profile.html:13
 #: templates/shop/base.html:61
@@ -48,19 +52,19 @@ msgstr "登出"
 msgid "Sign In"
 msgstr "登入"
 
-#: templates/accounts/signin.html:19
+#: templates/accounts/signin.html:22
 msgid "Sign in with Facebook"
 msgstr "用 Facebook 登入"
 
-#: templates/accounts/signin.html:24
+#: templates/accounts/signin.html:27
 msgid "Sign in with Instagram"
 msgstr "用 Instagram 登入"
 
-#: templates/accounts/signin.html:29
+#: templates/accounts/signin.html:32
 msgid "Sign in with Github"
 msgstr "用 Github 登入"
 
-#: templates/cart/detail.html:10 templates/shop/base.html:65
+#: templates/cart/detail.html:10 templates/shop/base.html:66
 msgid "Cart"
 msgstr "購物車"
 
@@ -101,6 +105,10 @@ msgstr "結帳"
 msgid "Information"
 msgstr "資料"
 
+#: templates/orders/order/create.html:27
+msgid "Place order"
+msgstr ""
+
 #: templates/orders/order/create.html:38
 msgid "Your Order"
 msgstr "您的訂單"
@@ -125,11 +133,15 @@ msgstr "。"
 msgid "Share"
 msgstr "分享"
 
-#: templates/shop/base.html:58
+#: templates/shop/base.html:57
 msgid "Home"
 msgstr "首頁"
 
-#: templates/shop/base.html:72 templates/shop/base.html:73
+#: templates/shop/base.html:71
+msgid "Language"
+msgstr "語言"
+
+#: templates/shop/base.html:81 templates/shop/base.html:82
 msgid "Search"
 msgstr "搜尋"
 

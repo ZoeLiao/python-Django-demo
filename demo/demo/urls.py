@@ -26,6 +26,7 @@ from django.urls import (
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('social-auth/', include(('social_django.urls', 'social_django'), namespace='social_django')),
+    path('i18n/', include('django.conf.urls.i18n')),
 ]
 
 urlpatterns += i18n_patterns(

@@ -126,7 +126,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-Hant'
 
 TIME_ZONE = 'UTC'
 
@@ -136,16 +136,19 @@ USE_L10N = False
 
 USE_TZ = True
 
+from django.utils.translation import gettext_lazy as _
 LANGUAGES = (
     ('en', ('English')),
-    ('zh_TW', ('中文繁體')),
+    ('zh-hant', _('Traditional Chinese')),
 )
 
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
 )
 
+# Session
 SESSION_COOKIE_AGE = 144000  # (24 hr)
+# SESSION_SAVE_EVERY_REQUEST = True # request 效率會下降改到 request
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
