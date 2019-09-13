@@ -87,3 +87,10 @@
 ## i18n
 - `python manage.py makemessages -l zh_Hant`
 - `python manage.py compilemessages`
+
+## Docker
+- `mkdir <path>/sites-available`
+- Build: `docker-compose up --build`
+- Run: `docker-compose up`
+- Remove: `docker-compose down -v`
+- docker system prune (-f)
