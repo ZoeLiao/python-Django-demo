@@ -1,7 +1,7 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,25 +54,49 @@
 				<ul class="navbar-nav mr-auto">
 {{ request.name }}
 					<li class="nav-item {% if request.resolver_match.url_name == 'homepage' %}active{% endif %}">
-						<a class="nav-link" href="/">Home</a>
+                        <a class="nav-link" href="/">{% trans "Home" %}</a>
 					</li>
+
 					<li class="nav-item {% if request.resolver_match.url_name == 'profile' %}active{% endif %}">
-						<a class="nav-link" href="/accounts/profile/">My Account</a>
+                        <a class="nav-link" href="/accounts/profile/">{% trans "My Account" %}</a>
 					</li>
+
 					{% with total_items=cart|length %}
 					<li class="nav-item {% if request.resolver_match.url_name == 'cart_detail' %}active{% endif %}">
-						<a class="nav-link" href="/cart/">Cart{% if  total_items  != 0 %}<input type="button" value="{{ total_items }}" class="btn btn-outline-info btn-sm ml-1 cart-button">{% endif %}{% if request.resolver_match.url_name == 'cart_list' %}{% endif %}</a>
+                        <a class="nav-link" href="/cart/">{% trans "Cart" %}{% if  total_items  != 0 %}<input type="button" value="{{ total_items }}" class="btn btn-outline-info btn-sm ml-1 cart-button">{% endif %}{% if request.resolver_match.url_name == 'cart_list' %}{% endif %}</a>
 					</li>
 					{% endwith %}
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="/accounts/profile/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% trans "Language" %}</a>
+						<form action="{% url 'set_language' %}" method="post" id="lang_form">{% csrf_token %}
+							<input name="next" type="hidden" value="{{ redirect_to }}">
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+								{% get_current_language as LANGUAGE_CODE %}
+								{% get_available_languages as LANGUAGES %}
+								{% get_language_info_list for LANGUAGES as languages %}
+								{% for language in languages %}
+								<li>
+									<button type="submit"
+											name="language"
+											value="{{ language.code }}"
+                                            class="{% if language.code == LANGUAGE_CODE %}selected{% else%}demo-text-black{% endif %} dropdown-item">
+										{{ language.name_local }}
+									</button>
+								</li>
+								{% endfor %}
+							</ul>
+						</form>
+						</a>
+					</li>
 				</ul>
 
                 <!-- search by google -->
                 <form class="form-inline my-2 my-lg-0" action="http://google.com/search" target="_blank">
-					<input class="form-control mr-sm-2" name="q" type="search" placeholder="Search" aria-label="Search">
-					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <input class="form-control mr-sm-2" name="q" type="search" placeholder="{% trans 'Search' %}" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">{% trans "Search" %}</button>
 				</form>
                 <!--/ search by google -->
-
 			</div>
 		</div>
     </nav>

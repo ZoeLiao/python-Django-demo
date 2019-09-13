@@ -1,4 +1,5 @@
 {% extends "shop/base.html" %}
+{% load i18n %}
 {% load static %}
 
 {% block extra_style_sheet %}
@@ -6,7 +7,7 @@
 {% endblock %}
 
 {% block title %}
-    Cart 
+    {% trans "Cart" %} 
 {% endblock %}
 
 {% block content %}
@@ -15,12 +16,12 @@
     <table class="table table-responsive table-hover mt-3">
         <thead>
             <tr class="table-Warning">
-                <th>Image</th>
-                <th>Product</th>
-                <th>Quantity</th>
-                <th>Remove</th>
-                <th>unit Price</th>
-                <th>Price</th>
+                <th>{% trans "Image" %}</th>
+                <th>{% trans "Product" %}</th>
+                <th>{% trans "Quantity" %}</th>
+                <th>{% trans "Remove" %}</th>
+                <th>{% trans "Unit Price" %}</th>
+                <th>{% trans "Price" %}</th>
             </tr>
         </thead>
 
@@ -63,8 +64,8 @@
     </table>
 
     <div class="d-flex justify-content-end mt-4">
-        <button class="btn btn-info mr-2" onclick="window.location.href='{% url "shop:product_list" %}'">Continue shopping</button>
-        <button class="btn btn-primary ml-2" onclick="window.location.href='{% url "orders:order_create" %}'">Checkout</button>
+        <button class="btn btn-info mr-2" onclick="window.location.href='{% url "shop:product_list" %}'">{% trans "Continue shopping" %}</button>
+        <button class="btn btn-primary ml-2" onclick="window.location.href='{% url "orders:order_create" %}'">{% trans "Checkout" %}</button>
     </div>
 </div>
 {% endblock %}

@@ -1,15 +1,16 @@
 {% extends "shop/base.html" %}
+{% load i18n %}
 {% load static %}
 
 {% block title %}
-    My Account
+    {% trans "My Account" %}
 {% endblock %}
 {% block content %}
 <div class="container-fluid px-3 mt-5 text-center">
     <div class="d-md-flex justify-content-center mt-4">
         <div class="card text-center">
             <div class="card-header">
-                <h3>My Account</h3>
+                <h3>{% trans "My Account" %}</h3>
             </div>
             <div class="card-body px-5">
                 {{ass.extra_data}}
@@ -26,7 +27,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-lg-6 col-xl-6">
-                            <p>Source:</p>
+                            <p>{% trans "Source" %}:</p>
                         </div>
                         <div class="col-md-6 col-lg-6 col-xl-6">
                             <p>{{ ass.provider }}</p>
@@ -35,7 +36,7 @@
 
                     <div class="row">
                         <div class="col-md-6 col-lg-6 col-xl-6">
-                            <p>Name:</p>
+                            <p>{% trans "Name" %}:</p>
                         </div>
                         <div class="col-md-6 col-lg-6 col-xl-6">
                         {% if ass.provider == 'facebook' %}
@@ -50,21 +51,21 @@
 
                     <div class="row">
                         <div class="col-md-6 col-lg-6 col-xl-6">
-                            <p>Url:</p>
+                            <p>{% trans "Url" %}:</p>
                         </div>
                         <div class="col-md-6 col-lg-6 col-xl-6">
                         {% if ass.provider == 'facebook' %}
-                            <a href="{{ass.extra_data.profile_url}}" class="demo-link demo-text-black">link</a>
+                            <a href="{{ass.extra_data.profile_url}}" class="demo-link demo-text-black">{% trans "link" %}</a>
                         {% elif ass.provider == 'instagram' %}
-                            <a href="https://instagram.com/{{ ass.username }}" class="demo-link demo-text-black">link</a>
+                            <a href="https://instagram.com/{{ ass.username }}" class="demo-link demo-text-black">{% trans "link" %}</a>
                         {% elif ass.provider == 'github' %}
-                        <a href="https://github.com/{{ ass.extra_data.login }}" class="demo-link demo-text-black">link</a>
+                            <a href="https://github.com/{{ ass.extra_data.login }}" class="demo-link demo-text-black">{% trans "link" %}</a>
                         {% endif %}
                         </div>
                     </div>
                 {% endfor %}
 
-                <button class="btn btn-danger mt-3" onclick="window.location.href='{% url 'signout' %}'">Sign Out</button>
+                <button class="btn btn-danger mt-3" onclick="window.location.href='{% url 'signout' %}'">{% trans "Sign Out" %}</button>
             </div>
         </div>
     </div>

@@ -73,7 +73,7 @@
 }
 
 .demo-text-black {
-    color: rgba(0,0,0,.5);
+    color: rgba(0,0,0,.5) !important;
 }
 
 .demo-link {
@@ -95,4 +95,9 @@
 
 .padding-bottom-sm {
     padding-bottom: 1rem !important;
+}
+
+.width-100-block {
+    display: block;
+    width: 100%;
 }

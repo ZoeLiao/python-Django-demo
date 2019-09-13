@@ -1,0 +1,212 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-12 13:28+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: templates/accounts/profile.html:6 templates/accounts/profile.html:13
+#: templates/shop/base.html:61
+msgid "My Account"
+msgstr ""
+
+#: templates/accounts/profile.html:30
+msgid "Source"
+msgstr ""
+
+#: templates/accounts/profile.html:39
+msgid "Name"
+msgstr ""
+
+#: templates/accounts/profile.html:54
+msgid "Url"
+msgstr ""
+
+#: templates/accounts/profile.html:58 templates/accounts/profile.html:60
+#: templates/accounts/profile.html:62
+msgid "link"
+msgstr ""
+
+#: templates/accounts/profile.html:68
+msgid "Sign Out"
+msgstr ""
+
+#: templates/accounts/signin.html:6 templates/accounts/signin.html:13
+msgid "Sign In"
+msgstr ""
+
+#: templates/accounts/signin.html:19
+msgid "Sign in with Facebook"
+msgstr ""
+
+#: templates/accounts/signin.html:24
+msgid "Sign in with Instagram"
+msgstr ""
+
+#: templates/accounts/signin.html:29
+msgid "Sign in with Github"
+msgstr ""
+
+#: templates/cart/detail.html:10 templates/shop/base.html:65
+msgid "Cart"
+msgstr ""
+
+#: templates/cart/detail.html:19
+msgid "Image"
+msgstr ""
+
+#: templates/cart/detail.html:20
+msgid "Product"
+msgstr ""
+
+#: templates/cart/detail.html:21
+msgid "Quantity"
+msgstr ""
+
+#: templates/cart/detail.html:22
+msgid "Remove"
+msgstr ""
+
+#: templates/cart/detail.html:23
+msgid "Unit Price"
+msgstr ""
+
+#: templates/cart/detail.html:24
+msgid "Price"
+msgstr ""
+
+#: templates/cart/detail.html:67
+msgid "Continue shopping"
+msgstr ""
+
+#: templates/cart/detail.html:68 templates/orders/order/create.html:10
+#: templates/orders/order/create.html:15
+msgid "Checkout"
+msgstr ""
+
+#: templates/orders/order/create.html:21
+msgid "Information"
+msgstr ""
+
+#: templates/orders/order/create.html:38
+msgid "Your Order"
+msgstr ""
+
+#: templates/orders/order/create.html:53
+msgid "Total"
+msgstr ""
+
+#: templates/orders/order/created.html:5
+msgid "Thank You"
+msgstr ""
+
+#: templates/orders/order/created.html:14
+msgid "Your order has been successfully complete. Your order numberis"
+msgstr ""
+
+#: templates/orders/order/created.html:14
+msgid "."
+msgstr ""
+
+#: templates/orders/order/created.html:18
+msgid "Share"
+msgstr ""
+
+#: templates/shop/base.html:58
+msgid "Home"
+msgstr ""
+
+#: templates/shop/base.html:72 templates/shop/base.html:73
+msgid "Search"
+msgstr ""
+
+#: templates/shop/carousel.html:15
+msgid "This is a demo shopping site"
+msgstr ""
+
+#: templates/shop/carousel.html:21
+msgid "Product Categories for selling"
+msgstr ""
+
+#: templates/shop/carousel.html:22
+msgid "Bags with blue, pink, yellow and green"
+msgstr ""
+
+#: templates/shop/carousel.html:28
+msgid "Products"
+msgstr ""
+
+#: templates/shop/carousel.html:29
+msgid "Blue, pink, yellow, and green bags contain different letters"
+msgstr ""
+
+#: templates/shop/homepage.html:6
+msgid "Homepage"
+msgstr ""
+
+#: templates/shop/homepage.html:16
+msgid "Techniques & Tools"
+msgstr ""
+
+#: templates/shop/homepage.html:20
+msgid "Backend - Django"
+msgstr ""
+
+#: templates/shop/homepage.html:24
+msgid "Frontend - Bootstrap"
+msgstr ""
+
+#: templates/shop/homepage.html:28
+msgid "Database - SQLite"
+msgstr ""
+
+#: templates/shop/homepage.html:32
+msgid "Cache - Redis"
+msgstr ""
+
+#: templates/shop/homepage.html:36
+msgid "Sending emails - Celery"
+msgstr ""
+
+#: templates/shop/homepage.html:40
+msgid "Sign in - third-party"
+msgstr ""
+
+#: templates/shop/homepage.html:44
+msgid "Sharing - Facebook"
+msgstr ""
+
+#: templates/shop/homepage.html:48
+msgid "Source Code"
+msgstr ""
+
+#: templates/shop/homepage.html:57
+msgid "About"
+msgstr ""
+
+#: templates/shop/homepage.html:58
+msgid ""
+"This is a demo shopping site, you can sign in in with social media accounts,"
+"<br> add goods to your cart, and receive an email after checking out."
+msgstr ""
+
+#: templates/shop/homepage.html:66
+msgid "Categories"
+msgstr ""
+
+#: templates/shop/homepage.html:129
+msgid "Demo Map"
+msgstr ""
