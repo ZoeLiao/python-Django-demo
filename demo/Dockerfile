@@ -6,3 +6,4 @@ RUN mkdir /docker_api
 WORKDIR /docker_api
 COPY . /docker_api
 RUN pip install -r requirements.txt
+RUN python manage.py collectstatic  --noinput

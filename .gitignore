@@ -9,3 +9,4 @@ db.sqlite3
 local.py
 
 log
+acme-challenge

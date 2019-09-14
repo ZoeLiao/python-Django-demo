@@ -105,6 +105,9 @@
     - `sudo usermod -a -G docker $USER`
     - sign out and sign in again
     - `sudo service docker start`
+- container:
+    - `docker container ls`
+    - `docker exec -it <Container ID> bash`
 
 ## Deploy
 - `python manage.py collectstatic`
