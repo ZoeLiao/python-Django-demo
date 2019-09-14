@@ -8,6 +8,8 @@
         - 第三方登入 (Facebook、Instagram、Github)、
         - 將商品加入購物車並提交訂單 (session)、
         - 異步發送訂單確認電子郵件給客戶 (Celery + Redis + Gmail)、
+        - 分享到 Facebook
+        - 查看 Google 地圖
         - 後台管理商品清單。
     - 響應式網站設計 (RWD)。
     - 國際化 (i18n)。

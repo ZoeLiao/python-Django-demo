@@ -2,12 +2,37 @@
 - [繁體中文 (Traditional Chinese)](https://github.com/ZoeLiao/python-Django-demo/blob/master/README.zh-TW.md)
 - Use Django & Bootstrap to build an online demo shopping site and deploy on AWS.
 - Demo Website: [https://zoeliao.nctu.me](https://zoeliao.nctu.me) (account: root, passowrd: admin)
-![demo_homepgae_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_homepage_en.png)
+- Images: 
+    - homepage  
+    ![demo_homepgae_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_homepage_en.png)
+    - products  
+    ![demo_products_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_products_en.png)
+    - no product  
+    ![demo_no_image_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_no_image_en.png)
+    - detail  
+    ![demo_detail_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_detail_en.png)
+    - cart  
+    ![demo_carts_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_carts_en.png)
+    - checkout  
+    ![demo_checkout_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_checkout_en.png)
+    - share  
+    ![demo_share_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_share_en.png)
+    - order confirmation email  
+    ![demo_mail.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_mail.png)
+    - login  
+    ![demo_3parts_login_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_3parts_login_en.png)
+    - login - github  
+    ![demo_3parts_login_github_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_3parts_login_github_en.png)
+    - demo map  
+    ![demo_map_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_map_en.png)
+
 - Functions:
     - Support to:
         - Add goods to shopping cart (recorded by session),
         - Send order confirmation email to customers (Celery + Redis + Gmail),
         - Sign in with third-party accounts (Facebook, Instagram, Github),
+        - Share to Facebook
+        - View address on Google Map
         - Manage Categories and Goods in the admin interface.
     - Responsive web design (RWD).
     - Internationalization (i18n).
