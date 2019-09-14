@@ -1,14 +1,17 @@
 # python-Django-demo
-![demo_homepgae_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_homepage_en.png)
 - [繁體中文 (Traditional Chinese)](https://github.com/ZoeLiao/python-Django-demo/blob/master/README.zh-TW.md)
-- Use Django to build an online demo shopping site.
+- Use Django & Bootstrap to build an online demo shopping site and deploy on AWS.
+- Demo Website: [https://zoeliao.nctu.me](https://zoeliao.nctu.me) (account: root, passowrd: admin)
+![demo_homepgae_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_homepage_en.png)
 - Functions:
-    - Basic shopping site
-    - Able to sign in with third-party accounts (Facebook, Instagram, Github)
-    - Use session to record user's cart
-    - Sending email by Celery + Redis + Gmail
-    - Internationalization
-    - Deploy: AWS + Docker + uWSGI + Nginx
+    - Support to:
+        - Add goods to shopping cart (recorded by session),
+        - Send order confirmation email to customers (Celery + Redis + Gmail),
+        - Sign in with third-party accounts (Facebook, Instagram, Github),
+        - Manage Categories and Goods in the admin interface.
+    - Responsive web design (RWD).
+    - Internationalization (i18n).
+    - Deployment (AWS + Docker + uWSGI + Nginx + Cerbot).
 - Techniques & tools for building the demo website:
     - Backend:
         - [Django (2.2)](https://www.djangoproject.com/)
@@ -21,17 +24,18 @@
             - test (TODO: finish)
         - [Celery](http://www.celeryproject.org/)
             - [flower](https://flower.readthedocs.io/en/latest/)
-        - [Docker](https://www.docker.com/)
-        - [AGINX](https://nginx.org/en/)
-        - [Jenkins](https://jenkins.io/zh/) (TODO)
     - Frontend:
         - [Bootstrap (4.3)](https://getbootstrap.com/)
     - Database:
         - [SQLite](https://www.sqlite.org/index.html)
     - Cache:
         - [Redis](https://redis.io/)
-    - Cloud platform:
-        - [AWS](https://aws.amazon.com/tw/) (TODO)
+    - Deployment:
+        - [AWS](https://aws.amazon.com/tw/)
+        - [Docker](https://www.docker.com/)
+        - [AGINX](https://nginx.org/en/)
+        - [Certbot (Let's encryp)](https://certbot.eff.org/)
+        - [Jenkins](https://jenkins.io/zh/) (TODO)
 - Reference:
     - [shopping site (中文)](https://kknews.cc/zh-tw/code/pe9o3x8.html)
     - [Loggin in with social media accounts](https://scotch.io/tutorials/django-authentication-with-facebook-instagram-and-linkedin)
@@ -74,7 +78,7 @@
 
 ## Send emails
 - Create settings_local.py by `vim demo/settings_local.py` (settings_local.py is an ignored file)
-- Input your email information in settings_local.py:
+- Input your email information in demo/settings/local.py:
     - `EMAIL_HOST = 'smtp.gmail.com'`
     - `EMAIL_PORT = 587`
     - `EMAIL_HOST_USER = '<your_email>@gmail.com'`
@@ -109,8 +113,8 @@
     - `docker container ls`
     - `docker exec -it <Container ID> bash`
 
-## Deploy
-- `python manage.py collectstatic`
-- No apt-get: `mkdir /etc/nginx/sites-available/`
+## Deployment
 - `docker-compose up --build`
-- `python manage.py migrate`
+- `docker exec -it <Web Container ID> bash`
+- `python manage.py collectstatic`
+- `python manage.py createsuperuser`

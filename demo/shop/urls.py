@@ -1,18 +1,18 @@
-from django.conf.urls import url
+from django.urls import path
 
 from shop import views
 
 
 urlpatterns = [
-    url(r'^$', views.homepage, name='homepage'),
-    url(r'list', views.product_list, name='product_list'),
-    url(
-        r'^(?P<category_slug>[-\w]+)/$',
+    path('', views.homepage, name='homepage'),
+    path('list', views.product_list, name='product_list'),
+    path(
+        '<slug:category_slug>/',
         views.product_list,
         name='product_list_by_category'
     ),
-    url(
-        r'^(?P<id>\d+)/(?P<slug>[-\w]+)/$',
+    path(
+        '<int:id>/<slug:slug>/$',
         views.product_detail,
         name='product_detail'
     ),
