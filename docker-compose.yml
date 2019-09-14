@@ -31,6 +31,8 @@ services:
 
   migration_and_run_worker:
     container_name: celery
+    environment:
+      - DJANGO_SETTINGS_MODULE=demo.settings.prod
     build: ./demo
     volumes:
       - api_data:/docker_api

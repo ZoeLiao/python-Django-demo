@@ -96,14 +96,6 @@ WSGI_APPLICATION = 'demo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
-
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
@@ -213,16 +205,3 @@ WEBSITE_URL = 'http://localhost:8000'
 WEBSITE_TITLE = 'Demo Shopping site'
 WEBSITE_DESCRIPTION = 'This is a demo shopping site, built with Django & Bootstrap.'
 WEBSITE_AUTHOR = 'ZoeLiao'
-
-try:
-    # import email information
-    from demo.settings_local import *
-    print('import EMAIL_HOST_USER from settings_local:', settings_local)
-
-    DOCKER_DOMAIN = os.environ.get('DOCKER_DOMAIN')
-    if DOCKER_DOMAIN == 'prod':
-        from demo.settings_prod import *
-    else:
-        from demo.settings_dev import *
-except:
-    pass

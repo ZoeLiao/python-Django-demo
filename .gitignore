@@ -5,6 +5,7 @@ __pycache__
 db.sqlite3
 .DS_Store
 
-settings_local.py
+# settings
+local.py
 
 log

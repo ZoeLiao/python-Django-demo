@@ -3,7 +3,9 @@ from celery import Celery
 from django.conf import settings
 
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'demo.settings')
+DJANGO_SETTINGS_MODULE = os.environ.get('DJANGO_SETTINGS_MODULE')
+if not DJANGO_SETTINGS_MODULE:
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'demo.settings.dev')
 
 
 app = Celery('demo')

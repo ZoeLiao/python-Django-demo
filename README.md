@@ -35,6 +35,7 @@
 - Reference:
     - [shopping site (中文)](https://kknews.cc/zh-tw/code/pe9o3x8.html)
     - [Loggin in with social media accounts](https://scotch.io/tutorials/django-authentication-with-facebook-instagram-and-linkedin)
+    - [twtrubiks/docker-django-nginx-uwsgi-postgres-tutorial](https://github.com/twtrubiks/docker-django-nginx-uwsgi-postgres-tutorial)
 
 ## Set up
 - `python3 -m venv venv`
