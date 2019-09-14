@@ -63,12 +63,15 @@
 
 					{% with total_items=cart|length %}
 					<li class="nav-item {% if request.resolver_match.url_name == 'cart_detail' %}active{% endif %}">
-                        <a class="nav-link" href="/cart/">{% trans "Cart" %}{% if  total_items  != 0 %}<input type="button" value="{{ total_items }}" class="btn btn-outline-info btn-sm ml-1 cart-button">{% endif %}{% if request.resolver_match.url_name == 'cart_list' %}{% endif %}</a>
+                        <a class="nav-link" href="{% url 'cart:cart_detail' %}">{% trans "Cart" %}{% if  total_items  != 0 %}<input type="button" value="{{ total_items }}" class="btn btn-outline-info btn-sm ml-1 cart-button">{% endif %}{% if request.resolver_match.url_name == 'cart_list' %}{% endif %}</a>
 					</li>
 					{% endwith %}
 
+					<li class="nav-item" title="account:root, password:admin">
+                        <a class="nav-link" href="{% url 'admin:index' %}">{% trans "Admin" %}</a>
+					</li>
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="/accounts/profile/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% trans "Language" %}</a>
+                        <a class="nav-link dropdown-toggle" href="{% url 'accounts:profile' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% trans "Language" %}</a>
 						<form action="{% url 'set_language' %}" method="post" id="lang_form">{% csrf_token %}
 							<input name="next" type="hidden" value="{{ redirect_to }}">
 							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -88,6 +91,9 @@
 							</ul>
 						</form>
 						</a>
+					</li>
+					<li class="nav-item {% if request.resolver_match.url_name == 'profile' %}active{% endif %}">
+                        <a class="nav-link" href="/accounts/profile/">{% trans "My Account" %}</a>
 					</li>
 				</ul>
 
