@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load i18n %}
 {% load static %}
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
@@ -222,7 +223,7 @@ table{
 	bottom: 0;
 	content: '';
 	width: 100%;
-	background: #000000;
+	background: #17a2b8;
 	z-index: -1;
 	opacity: .3;
 }
@@ -462,8 +463,8 @@ ul.social li{
           <td valign="top" class="bg_white" style="padding: 1em 2.5em;">
           	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
           		<tr>
-          			<td width="40%" class="logo" style="text-align: left;">
-                        <h1><a href="{{ WEBSITE_URL }}">DOMO</a></h1>
+          			<td class="logo" style="text-align: left;">
+                        <h1><a href="{{ WEBSITE_URL }}"><img src="https://zoeliao.nctu.me/static/images/logo.png"/ style="width: 40px;"></a></h1>
 			          </td>
 			          <td width="60%" class="logo" style="text-align: right;">
 			            <ul class="navigation">
@@ -485,7 +486,7 @@ ul.social li{
             		<td>
             			<div class="text" style="text-align: center;">
                             <h2>{% trans "Order Confirmation" %}</h2>
-                            <h3>{% trans "Dear {{ name }}, Thank you for your purchase, your order is" %} {{ id }}{% trans "." %}</h3>
+                            <h3>{% trans "Dear" %}{{ name }}{% trans ", Thank you for your purchase, your order is" %} {{ id }}{% trans "." %}</h3>
             			</div>
             		</td>
             	</tr>

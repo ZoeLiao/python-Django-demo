@@ -1,116 +1,114 @@
-{% load static %}
-{% load i18n %}
+{% load static %} {% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Demo - {% block title %}{% endblock%}</title>
-        <link href="{% static 'css/base.css' %}" rel="stylesheet">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="icon" href="{% static 'images/logo.png' %}">
 
-        <!-- Facebook -->
-        <meta property="og:url" content="{{ WEBSITE_URL }}" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="{{ WEBSITE_TITLE }}"/>
-        <meta property="og:description" content="{{ WEBSITE_DESCRIPTION }}"/>
-        <meta property="og:image" content="{% static 'images/logo.png' %}"/>
-        <!--/ Facebook -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo - {% block title %}{% endblock%}</title>
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" href="{% static 'images/logo.png' %}">
 
-        <!-- Schema.org markup for Google+ -->
-        <meta itemprop="name" content="{{ WEBSITE_TITLE }}">
-        <meta itemprop="description" content="{{ WEB_DESCRIPTION }}">
-        <meta itemprop="image" content="{% static 'images/logo.png' %}">
-        <!--/ Schema.org markup for Google+ -->
+    <!-- Facebook -->
+    <meta property="og:url" content="{{ WEBSITE_URL }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ WEBSITE_TITLE }}" />
+    <meta property="og:description" content="{{ WEBSITE_DESCRIPTION }}" />
+    <meta property="og:image" content="{% static 'images/logo.png' %}" />
+    <!--/ Facebook -->
 
-        <!-- Twitter Card data -->
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="@ZoeLiao">
-        <meta name="twitter:title" content="{{ WEBSITE_TITLE }}">
-        <meta name="twitter:description" content="{{ WEBSITE_DESCRIPTION }}">
-        <meta name="twitter:creator" content="{{ WEBSITE_AUTHOR }}">
-        <!-- Twitter summary card with large image must be at least 280x150px -->
-        <meta name="twitter:image:src" content="{% static 'images/logo.png' %}">
-        <!--/ Twitter Card data -->
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="{{ WEBSITE_TITLE }}">
+    <meta itemprop="description" content="{{ WEB_DESCRIPTION }}">
+    <meta itemprop="image" content="{% static 'images/logo.png' %}">
+    <!--/ Schema.org markup for Google+ -->
 
-        {% block extra_style_sheet %}
-        {% endblock %}
-    </head>
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@ZoeLiao">
+    <meta name="twitter:title" content="{{ WEBSITE_TITLE }}">
+    <meta name="twitter:description" content="{{ WEBSITE_DESCRIPTION }}">
+    <meta name="twitter:creator" content="{{ WEBSITE_AUTHOR }}">
+    <!-- Twitter summary card with large image must be at least 280x150px -->
+    <meta name="twitter:image:src" content="{% static 'images/logo.png' %}">
+    <!--/ Twitter Card data -->
 
-    <body>
+    {% block extra_style_sheet %} {% endblock %}
+</head>
+
+<body>
 
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light navbar-suspend" id="base-navbar">
         <div class="container">
             <a class="navbar-brand" href="/"><img src="{% static 'images/logo.png' %}" style="width:48px;"></a>
 
-			<button class="navbar-toggler non-border" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler non-border" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		    </button>
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-{{ request.name }}
-					<li class="nav-item {% if request.resolver_match.url_name == 'homepage' %}active{% endif %}">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    {{ request.name }}
+                    <li class="nav-item {% if request.resolver_match.url_name == 'homepage' %}active{% endif %}">
                         <a class="nav-link" href="/">{% trans "Home" %}</a>
-					</li>
+                    </li>
 
-					<li class="nav-item {% if request.resolver_match.url_name == 'profile' %}active{% endif %}">
-                        <a class="nav-link" href="/accounts/profile/">{% trans "My Account" %}</a>
-					</li>
-
-					{% with total_items=cart|length %}
-					<li class="nav-item {% if request.resolver_match.url_name == 'cart_detail' %}active{% endif %}">
+                    <!-- cart -->
+                    {% with total_items=cart|length %}
+                    <li class="nav-item {% if request.resolver_match.url_name == 'cart_detail' %}active{% endif %}">
                         <a class="nav-link" href="{% url 'cart:cart_detail' %}">{% trans "Cart" %}{% if  total_items  != 0 %}<input type="button" value="{{ total_items }}" class="btn btn-outline-info btn-sm ml-1 cart-button">{% endif %}{% if request.resolver_match.url_name == 'cart_list' %}{% endif %}</a>
-					</li>
-					{% endwith %}
+                    </li>
+                    {% endwith %}
+                    <!--/ cart -->
 
-					<li class="nav-item" title="account:root, password:admin">
+                    <!-- My Account -->
+                    <li class="nav-item {% if request.resolver_match.url_name == 'profile' or request.resolver_match.url_name == 'signin' %}active{% endif %}">
+                        <a class="nav-link" href="{% url 'accounts:profile' %}">{% trans "My Account" %}</a>
+                    </li>
+                    <!--/ My Account -->
+
+                    <!-- Admin -->
+                    <li class="nav-item" title="account:root, password:admin">
                         <a class="nav-link" href="{% url 'admin:index' %}">{% trans "Admin" %}</a>
-					</li>
-					<li class="nav-item dropdown">
+                    </li>
+                    <!--/ Admin -->
+
+                    <!-- dropdown -->
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="{% url 'accounts:profile' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% trans "Language" %}</a>
-						<form action="{% url 'set_language' %}" method="post" id="lang_form">{% csrf_token %}
-							<input name="next" type="hidden" value="{{ redirect_to }}">
-							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-								{% get_current_language as LANGUAGE_CODE %}
-								{% get_available_languages as LANGUAGES %}
-								{% get_language_info_list for LANGUAGES as languages %}
-								{% for language in languages %}
-								<li>
-									<button type="submit"
-											name="language"
-											value="{{ language.code }}"
-                                            class="{% if language.code == LANGUAGE_CODE %}selected{% else%}demo-text-black{% endif %} dropdown-item">
+                        <form action="{% url 'set_language' %}" method="post" id="lang_form">{% csrf_token %}
+                            <input name="next" type="hidden" value="{{ redirect_to }}">
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                {% get_current_language as LANGUAGE_CODE %} {% get_available_languages as LANGUAGES %} {% get_language_info_list for LANGUAGES as languages %} {% for language in languages %}
+                                <li>
+                                    <button type="submit" name="language" value="{{ language.code }}" class="{% if language.code == LANGUAGE_CODE %}selected{% else%}demo-text-black{% endif %} dropdown-item">
 										{{ language.name_local }}
 									</button>
-								</li>
-								{% endfor %}
-							</ul>
-						</form>
-						</a>
-					</li>
-					<li class="nav-item {% if request.resolver_match.url_name == 'profile' %}active{% endif %}">
-                        <a class="nav-link" href="/accounts/profile/">{% trans "My Account" %}</a>
-					</li>
-				</ul>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </form>
+                        </a>
+                    </li>
+                    <!--/ dropdown -->
+                </ul>
 
                 <!-- search by google -->
                 <form class="form-inline my-2 my-lg-0" action="http://google.com/search" target="_blank">
                     <input class="form-control mr-sm-2" name="q" type="search" placeholder="{% trans 'Search' %}" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">{% trans "Search" %}</button>
-				</form>
+                </form>
                 <!--/ search by google -->
-			</div>
-		</div>
+            </div>
+        </div>
     </nav>
     <!--/ navbar -->
 
     <div id="content" class="mt-5 py-2 min-height-60">
-        {% block content %}
-        {% endblock %}
+        {% block content %} {% endblock %}
     </div>
 
     <!-- footer -->
@@ -126,7 +124,7 @@
 
     {% block extra_script %}{% endblock %}
     <script>
-        {% block extra_js %}{% endblock %}
+        { % block extra_js %} { % endblock %}
     </script>
 </body>
 
