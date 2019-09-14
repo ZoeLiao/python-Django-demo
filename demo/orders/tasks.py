@@ -1,6 +1,11 @@
 from celery import task
-from django.core.mail import send_mail
+from django.core.mail import (
+    EmailMultiAlternatives,
+    send_mail
+)
 from django.conf import settings
+from django.template.loader import get_template
+from django.utils.translation import gettext as _
 
 from orders.models import Order
 
@@ -8,13 +13,21 @@ from orders.models import Order
 @task
 def order_created(order_id):
     order = Order.objects.get(id=order_id)
-    subject = 'Order nr. {}'.format(order.id)
-    message = 'Dear {},\n\nYou have successfully placed an order.\
-                Your order id is {}.'.format(order.first_name, order.id)
-    mail_sent = send_mail(
-            subject,
-            message,
-            settings.EMAIL_HOST_USER,
-            [order.email]
+    subject = _('python-Django-demo - Order nr. {}').format(order.id)
+
+    template = get_template('mail/order.html')
+    data = {
+        'WEBSITE_URL': settings.WEBSITE_URL,
+        'name': order.first_name,
+        'id': order.id
+    }
+    html_email = template.render(data)
+
+    msg = EmailMultiAlternatives(
+        subject,
+        settings.EMAIL_HOST_USER,
+        to=[order.email]
     )
-    return mail_sent
+    msg.attach_alternative(html_email, "text/html")
+    res = msg.send()
+    print('res', res)

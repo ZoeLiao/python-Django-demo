@@ -1,15 +1,16 @@
 from django.db import models
 from shop.models import Product
 import django.utils.timezone as timezone
+from django.utils.translation import gettext_lazy
 
 
 class Order(models.Model):
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
-    email = models.EmailField()
-    address = models.CharField(max_length=250)
-    postal_code = models.CharField(max_length=20)
-    city = models.CharField(max_length=100)
+    first_name = models.CharField(max_length=50, verbose_name=gettext_lazy('First Name'))
+    last_name = models.CharField(max_length=50, verbose_name=gettext_lazy('Last Name'))
+    email = models.EmailField(verbose_name=gettext_lazy('Email'))
+    address = models.CharField(max_length=250, verbose_name=gettext_lazy('address'))
+    postal_code = models.CharField(max_length=20, verbose_name=gettext_lazy('postal_code'))
+    city = models.CharField(max_length=100, verbose_name=gettext_lazy('city'))
     created_at = models.DateTimeField(
             default = timezone.now
         )

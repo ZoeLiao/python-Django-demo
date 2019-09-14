@@ -1,3 +1,4 @@
+{% load i18n %}
 <footer id="footer" class="demo-black mt-4">
     <!--Footer Links-->
     <div class="container text-center text-md-left mt-5">
@@ -5,7 +6,7 @@
             {% for n in 'demo'%}
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 mt-4">
                 <h6 class="text-uppercase font-weight-bold">
-                    <strong class="demo-text-white">demo category</strong>
+                    <strong class="demo-text-white">{% trans "demo footer" %}</strong>
                 </h6>
                 <hr class="demo-white full-width">
                 {% for m in 'site' %}

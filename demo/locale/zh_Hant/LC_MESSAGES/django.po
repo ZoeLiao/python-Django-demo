@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 06:38+0000\n"
+"POT-Creation-Date: 2019-09-14 12:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,40 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: demo/settings.py:142
+#: demo/settings/base.py:135
 msgid "Traditional Chinese"
 msgstr "繁體中文"
 
+#: orders/models.py:8
+msgid "First Name"
+msgstr "名字"
+
+#: orders/models.py:9
+msgid "Last Name"
+msgstr "姓氏"
+
+#: orders/models.py:10
+msgid "Email"
+msgstr "電子信箱"
+
+#: orders/models.py:11
+msgid "address"
+msgstr "地址"
+
+#: orders/models.py:12
+msgid "postal_code"
+msgstr "郵遞區號"
+
+#: orders/models.py:13
+msgid "city"
+msgstr "城市"
+
+#: orders/tasks.py:16
+msgid "python-Django-demo - Order nr. {}"
+msgstr "python-Django-demo - 訂單編號 {}"
+
 #: templates/accounts/profile.html:6 templates/accounts/profile.html:13
-#: templates/shop/base.html:61
+#: templates/shop/base.html:70
 msgid "My Account"
 msgstr "我的帳戶"
 
@@ -64,7 +92,7 @@ msgstr "用 Instagram 登入"
 msgid "Sign in with Github"
 msgstr "用 Github 登入"
 
-#: templates/cart/detail.html:10 templates/shop/base.html:66
+#: templates/cart/detail.html:10 templates/shop/base.html:63
 msgid "Cart"
 msgstr "購物車"
 
@@ -109,6 +137,22 @@ msgstr "繼續購物"
 msgid "Checkout"
 msgstr "結帳"
 
+#: templates/mail/order.html:488
+msgid "Order Confirmation"
+msgstr "訂單確認"
+
+#: templates/mail/order.html:489
+msgid "Dear"
+msgstr "親愛的"
+
+#: templates/mail/order.html:489
+msgid ", Thank you for your purchase, your order is"
+msgstr "，謝謝您的光臨本店，您的訂單是"
+
+#: templates/mail/order.html:489 templates/orders/order/created.html:14
+msgid "."
+msgstr "。"
+
 #: templates/orders/order/create.html:21
 msgid "Information"
 msgstr "資料"
@@ -125,7 +169,7 @@ msgstr "您的訂單"
 msgid "Total"
 msgstr "總計"
 
-#: templates/orders/order/created.html:5
+#: templates/orders/order/created.html:5 templates/orders/order/created.html:11
 msgid "Thank You"
 msgstr "謝謝您"
 
@@ -133,11 +177,11 @@ msgstr "謝謝您"
 msgid "Your order has been successfully complete. Your order numberis"
 msgstr "您的訂單已經完成，訂單號碼是："
 
-#: templates/orders/order/created.html:14
-msgid "."
-msgstr "。"
+#: templates/orders/order/created.html:15
+msgid "The order confirmtaion email has been sent to your email."
+msgstr "訂單確認電子郵件已經發送到您的信箱。"
 
-#: templates/orders/order/created.html:18
+#: templates/orders/order/created.html:19
 msgid "Share"
 msgstr "分享"
 
@@ -145,11 +189,15 @@ msgstr "分享"
 msgid "Home"
 msgstr "首頁"
 
-#: templates/shop/base.html:71
+#: templates/shop/base.html:76
+msgid "Admin"
+msgstr "管理後台"
+
+#: templates/shop/base.html:82
 msgid "Language"
 msgstr "語言"
 
-#: templates/shop/base.html:96 templates/shop/base.html:97
+#: templates/shop/base.html:108 templates/shop/base.html:109
 msgid "Search"
 msgstr "搜尋"
 
@@ -172,6 +220,10 @@ msgstr "商品"
 #: templates/shop/carousel.html:29
 msgid "Blue, pink, yellow, and green bags contain different letters"
 msgstr "不同顏色不同字母的袋子"
+
+#: templates/shop/footer.html:9
+msgid "demo footer"
+msgstr ""
 
 #: templates/shop/homepage.html:6
 msgid "Homepage"
