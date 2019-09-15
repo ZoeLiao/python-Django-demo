@@ -1,15 +1,17 @@
 
-@media (min-width: 992px)
-.navbar-expand-lg .navbar-collapse {
-    display: flex !important;
+@media (min-width: 768px) {
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important;
+    }
 }
 
-@media (min-width: 992px)
-.navbar-expand-lg {
-    -webkit-box-direction: normal;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
+@media (min-width: 768px) {
+    .navbar-expand-lg {
+        -webkit-box-direction: normal;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
 }
 
 .navbar-collapse {
@@ -38,6 +40,12 @@
 
 .carousel-slide-des {
     color: #263238;
+}
+
+@media (max-width: 350px) {
+    .h-50vh {
+        height: 50vh;
+    }
 }
 
 .non-border {

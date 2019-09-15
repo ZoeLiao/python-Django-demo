@@ -143,3 +143,7 @@
 - `docker exec -it <Web Container ID> bash`
 - `python manage.py collectstatic`
 - `python manage.py createsuperuser`
+
+## Git
+- Git doesn't notice change in image:
+    - `git rm --cached path/to/image.jpg`
