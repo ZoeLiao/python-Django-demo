@@ -29,7 +29,7 @@
     - 前端:
         - [Bootstrap (4.3)](https://getbootstrap.com/)
     - 資料庫:
-        - [SQLite](https://www.sqlite.org/index.html)
+        - [MySQL](https://www.mysql.com/)
     - 緩存：
         - [Redis](https://redis.io/)
     - 部署:

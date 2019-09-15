@@ -52,7 +52,7 @@
     - Frontend:
         - [Bootstrap (4.3)](https://getbootstrap.com/)
     - Database:
-        - [SQLite](https://www.sqlite.org/index.html)
+        - [MySQL](https://www.mysql.com/)
     - Cache:
         - [Redis](https://redis.io/)
     - Deployment:

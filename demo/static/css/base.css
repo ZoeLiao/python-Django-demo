@@ -42,10 +42,8 @@
     color: #263238;
 }
 
-@media (max-width: 350px) {
-    .h-50vh {
-        height: 50vh;
-    }
+.h-50vh {
+    height: 50vh;
 }
 
 .non-border {
