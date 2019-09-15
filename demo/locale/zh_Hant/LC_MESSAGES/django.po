@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-14 12:16+0000\n"
+"POT-Creation-Date: 2019-09-15 12:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,7 +51,7 @@ msgid "python-Django-demo - Order nr. {}"
 msgstr "python-Django-demo - 訂單編號 {}"
 
 #: templates/accounts/profile.html:6 templates/accounts/profile.html:13
-#: templates/shop/base.html:70
+#: templates/shop/base.html:69
 msgid "My Account"
 msgstr "我的帳戶"
 
@@ -92,7 +92,7 @@ msgstr "用 Instagram 登入"
 msgid "Sign in with Github"
 msgstr "用 Github 登入"
 
-#: templates/cart/detail.html:10 templates/shop/base.html:63
+#: templates/cart/detail.html:10 templates/shop/base.html:62
 msgid "Cart"
 msgstr "購物車"
 
@@ -147,7 +147,7 @@ msgstr "親愛的"
 
 #: templates/mail/order.html:489
 msgid ", Thank you for your purchase, your order is"
-msgstr "，謝謝您的光臨本店，您的訂單是"
+msgstr "，謝謝您光臨本店，您的訂單是"
 
 #: templates/mail/order.html:489 templates/orders/order/created.html:14
 msgid "."
@@ -185,19 +185,19 @@ msgstr "訂單確認電子郵件已經發送到您的信箱。"
 msgid "Share"
 msgstr "分享"
 
-#: templates/shop/base.html:57
+#: templates/shop/base.html:56
 msgid "Home"
 msgstr "首頁"
 
-#: templates/shop/base.html:76
+#: templates/shop/base.html:75
 msgid "Admin"
 msgstr "管理後台"
 
-#: templates/shop/base.html:82
+#: templates/shop/base.html:81
 msgid "Language"
 msgstr "語言"
 
-#: templates/shop/base.html:108 templates/shop/base.html:109
+#: templates/shop/base.html:101 templates/shop/base.html:102
 msgid "Search"
 msgstr "搜尋"
 
@@ -205,15 +205,16 @@ msgstr "搜尋"
 msgid "This is a demo shopping site"
 msgstr "這是一個用來 demo 的購物網站"
 
-#: templates/shop/carousel.html:21
-msgid "Product Categories for selling"
-msgstr "商品種類"
+#: templates/shop/carousel.html:21 templates/shop/homepage.html:66
+#: templates/shop/product/list.html:18
+msgid "Categories"
+msgstr "種類"
 
 #: templates/shop/carousel.html:22
 msgid "Bags with blue, pink, yellow and green"
 msgstr "不同顏色的袋子"
 
-#: templates/shop/carousel.html:28 templates/shop/product/list.html:42
+#: templates/shop/carousel.html:28 templates/shop/product/list.html:38
 msgid "Products"
 msgstr "商品"
 
@@ -242,8 +243,8 @@ msgid "Frontend - Bootstrap"
 msgstr "前端 - Bootstrap"
 
 #: templates/shop/homepage.html:28
-msgid "Database - SQLite"
-msgstr "資料庫 - SQLite"
+msgid "Database - MySQL"
+msgstr "資料庫 - MySQL"
 
 #: templates/shop/homepage.html:32
 msgid "Cache - Redis"
@@ -271,15 +272,11 @@ msgstr "關於"
 
 #: templates/shop/homepage.html:58
 msgid ""
-"This is a demo shopping site, you can sign in in with social media accounts,"
+"This is a demo shopping site, you can sign in in with third-party accounts,"
 "<br> add goods to your cart, and receive an email after checking out."
 msgstr ""
 "這是一個用來 demo 的購物網站，你可以用第三方登入、<br>將商品加入購物車、並在"
 "提交結帳資料後收到一封訂單確認電子郵件"
-
-#: templates/shop/homepage.html:66 templates/shop/product/list.html:22
-msgid "Categories"
-msgstr "種類"
 
 #: templates/shop/homepage.html:91
 msgid "See More"
@@ -297,6 +294,9 @@ msgstr "Demo 地圖"
 msgid "Add to cart"
 msgstr "加到購物車"
 
-#: templates/shop/product/list.html:25
+#: templates/shop/product/list.html:22
 msgid "All"
 msgstr "全部"
+
+#~ msgid "Product Categories for selling"
+#~ msgstr "商品種類"

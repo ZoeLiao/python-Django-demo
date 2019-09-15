@@ -2,10 +2,6 @@
 {% load i18n %}
 {% load static %}
 
-{% block extra_style_sheet %}
-<link href="{% static 'css/list.css' %}" rel="stylesheet">
-{% endblock %}
-
 {% block title %}
     {% if category %}
         {{ category.name }}
@@ -18,23 +14,23 @@
     <div class="container-fluid px-5 mt-5">
         <div class="row">
             <div class="col-md-3 col-lg-3 col-xl-3">
-                <div class="sidebar_nav px-3 py-2">
-                    <h3>{% trans "Categories" %}</h3>
-                    <ul>
-                        <li {% if not category %} class="selected" {% endif %}>
-                            <a href="{% url 'shop:product_list' %}" {% if category.slug != c.slug %}class="demo-link demo-text-black"{% endif %}>{% trans "All" %}</a>
-                        </li>
+                <div class="px-3 py-2">
+                    <h1>{% trans "Categories" %}</h1>
+                    <hr>
+                    <div class="mt-3">
+                        <div class="mb-3">
+                            <button onclick="window.location.href='{% url 'shop:product_list' %}'" class="btn btn-outline-primary {% if category.slug == c.slug %}active{% endif %}">{% trans "All" %}</button>
+                        </div>
+
                         {% for c in categories %}
-                        <li {% if category.slug == c.slug %} class="selected" {% else %}{% endif %}>
-                            <a href="{{ c.get_absolute_url }}" {% if category.slug != c.slug %}class="demo-link demo-text-black"{% endif %}>{{ c.name }}</a>
-                            </li>
+                            <button onclick="window.location.href='{{ c.get_absolute_url }}'" class="btn btn-outline-info mb-2 {% if category.slug == c.slug %}active{% endif %}">{{ c.name }}</button>
                         {% endfor %}
-                    </ul>
+                    </div>
                 </div>
             </div>
 
             <div class="col-md-9 col-lg-9 col-xl-9">
-                <div id="main" class="product-list">
+                <div id="main" class="product-list px-3 py-2">
                     <h1>
                         {% if category %}
                             {{ category.name }}
