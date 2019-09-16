@@ -120,7 +120,6 @@
         - `SOCIAL_AUTH_FACEBOOK_KEY = <your Facebook key>`
         - `SOCIAL_AUTH_FACEBOOK_SECRET = <your Facebook secret>`
     - Instagram (If you do not hav key, please visit: [Instagram for developers](https://www.instagram.com/developer/)):
-        - `SOCIAL_AUTH_FACEBOOK_KEY = <your Facebook key>`
         - `SOCIAL_AUTH_INSTAGRAM_KEY = <your Instagram key>`
         - `SOCIAL_AUTH_INSTAGRAM_SECRET = <your Instagram secret>`
     - GitHub (If you do not hav key, please visit: [GitHub Dveloper](https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/)):
