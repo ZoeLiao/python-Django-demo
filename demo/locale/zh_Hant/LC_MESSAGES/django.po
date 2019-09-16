@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-15 12:43+0000\n"
+"POT-Creation-Date: 2019-09-16 03:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,24 +55,24 @@ msgstr "python-Django-demo - 訂單編號 {}"
 msgid "My Account"
 msgstr "我的帳戶"
 
-#: templates/accounts/profile.html:30
+#: templates/accounts/profile.html:31
 msgid "Source"
 msgstr "來源"
 
-#: templates/accounts/profile.html:39
+#: templates/accounts/profile.html:40
 msgid "Name"
 msgstr "用戶名"
 
-#: templates/accounts/profile.html:54
+#: templates/accounts/profile.html:55
 msgid "Url"
 msgstr "連結"
 
-#: templates/accounts/profile.html:58 templates/accounts/profile.html:60
-#: templates/accounts/profile.html:62
+#: templates/accounts/profile.html:59 templates/accounts/profile.html:61
+#: templates/accounts/profile.html:63
 msgid "link"
 msgstr "連結"
 
-#: templates/accounts/profile.html:68
+#: templates/accounts/profile.html:78
 msgid "Sign Out"
 msgstr "登出"
 
@@ -205,7 +205,7 @@ msgstr "搜尋"
 msgid "This is a demo shopping site"
 msgstr "這是一個用來 demo 的購物網站"
 
-#: templates/shop/carousel.html:21 templates/shop/homepage.html:66
+#: templates/shop/carousel.html:21 templates/shop/homepage.html:70
 #: templates/shop/product/list.html:18
 msgid "Categories"
 msgstr "種類"
@@ -263,14 +263,18 @@ msgid "Sharing - Facebook"
 msgstr "分享 - Facebook"
 
 #: templates/shop/homepage.html:48
+msgid "Deployment - AWS + Docker + uWSGI + Nginx + Cerbot"
+msgstr "部署 - AWS + Docker + uWSGI + Nginx + Cerbot"
+
+#: templates/shop/homepage.html:52
 msgid "Source Code"
 msgstr "原始碼"
 
-#: templates/shop/homepage.html:57
+#: templates/shop/homepage.html:61
 msgid "About"
 msgstr "關於"
 
-#: templates/shop/homepage.html:58
+#: templates/shop/homepage.html:62
 msgid ""
 "This is a demo shopping site, you can sign in in with third-party accounts,"
 "<br> add goods to your cart, and receive an email after checking out."
@@ -278,15 +282,15 @@ msgstr ""
 "這是一個用來 demo 的購物網站，你可以用第三方登入、<br>將商品加入購物車、並在"
 "提交結帳資料後收到一封訂單確認電子郵件"
 
-#: templates/shop/homepage.html:91
+#: templates/shop/homepage.html:95
 msgid "See More"
 msgstr "查看更多"
 
-#: templates/shop/homepage.html:99
+#: templates/shop/homepage.html:103
 msgid "Contact Me"
 msgstr "聯繫我"
 
-#: templates/shop/homepage.html:129
+#: templates/shop/homepage.html:133
 msgid "Demo Map"
 msgstr "Demo 地圖"
 
