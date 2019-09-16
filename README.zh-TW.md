@@ -13,7 +13,7 @@
         - 後台管理商品清單。
     - 響應式網站設計 (RWD)。
     - 國際化 (i18n)。
-    - 部署 (AWS + Docker + uWSGI + Nginx + Cerbot)。
+    - 部署 (AWS + Docker + uWSGI + NGINX + Certbot)。
 - 使用技術與工具：
     - 後端：
         - [Django (2.2)](https://www.djangoproject.com/)

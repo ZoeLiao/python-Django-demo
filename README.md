@@ -36,7 +36,7 @@
         - Manage Categories and Goods in the admin interface.
     - Responsive web design (RWD).
     - Internationalization (i18n).
-    - Deployment (AWS + Docker + uWSGI + Nginx + Cerbot).
+    - Deployment (AWS + Docker + uWSGI + NGINX + Certbot).
 - Techniques & tools for building the demo website:
     - Backend:
         - [Django (2.2)](https://www.djangoproject.com/)
