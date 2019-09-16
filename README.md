@@ -17,7 +17,7 @@
     ![demo_checkout_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_checkout_en.png)
     - Sharing  
     ![demo_share_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_share_en.png)
-    - order confirmation email  
+    - Order Confirmation Email  
     ![demo_mail.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_mail.png)
     - Sign In  
     ![demo_3parts_login_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_3parts_login_en.png)
@@ -77,7 +77,6 @@
 - Add demo/settings/loca/ and add your email information, and facebook, instagram, GitHub key (Please read [Send emails](https://github.com/ZoeLiao/python-Django-demo#send-emails) and [Sign in with third-party accounts](https://github.com/ZoeLiao/python-Django-demo#Sign-in-with-third-party-accounts))
 - `python manage.py runserver`
 - Visit [http://localhost:8000/](http://localhost:8000/)
-- To send email, please open a new tab and run the command of [Celery - start](https://github.com/ZoeLiao/python-Django-demo#Celery)
 
 ## Start an app
 - If you want to add a new funtion:
@@ -89,18 +88,18 @@
     - `python manage.py migrate`
 - Failed to detect changes:
     - Run the command of [Management - Delete the data of specific app](https://github.com/ZoeLiao/python-Django-demo#management)
-    - fake:
+    - Fake Migration:
         - Tells Django to mark the migrations as having been applied or unapplied, but without actually running the SQL to change your database schema
         - `python manage.py makemigrations <app_name>`
         - `python manage.py migrate --fake`
-    - migrate:
+    - Migrate:
         - `python manage.py makemigrations <app_name>`
         - `python manage.py migrate`
 
 ## Management
 - Delete the data of specific app:
     - `python manage.py manual_migration <app_name>`
-    - ex: `python manage.py manual_migration shop`
+    - e.g., `python manage.py manual_migration shop`
 
 ## Static files
 - `python manage.py collectstatic`
@@ -112,7 +111,7 @@
     - `EMAIL_PORT = 587`
     - `EMAIL_HOST_USER = '<your_email>@gmail.com'`
     - `EMAIL_HOST_PASSWORD = '<your_password>'`
-- start Celery by the following command
+- Start Celery by the following command of [Celery - start](https://github.com/ZoeLiao/python-Django-demo#Celery)
 
 ## Sign in with third-party accounts:
 - If there is not settings/local.py, create it by `vim demo/settings/local.py` (settings/local.py is an ignored file)
@@ -138,7 +137,10 @@
 - `python manage.py test <app_name>.tests`
 
 ## i18n
-- `python manage.py makemessages -l zh_Hant`
+- `python manage.py makemessages -l <target language>`
+    - e.g., `python manage.py makemessages -l zh_Hant`
+- `vim demo/locale/<target_language>/LC_MESSAGES/django.po`
+    - e.g., `vim demo/locale/zh_Hant/LC_MESSAGES/django.po`
 - `python manage.py compilemessages`
 
 ## Docker
@@ -152,7 +154,7 @@
     - `sudo usermod -a -G docker $USER`
     - sign out and sign in again
     - `sudo service docker start`
-- container:
+- Container:
     - `docker container ls`
     - `docker exec -it <Container ID> bash`
 

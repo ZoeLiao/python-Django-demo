@@ -8,8 +8,8 @@
         - 第三方登入 (Facebook、Instagram、Github)、
         - 將商品加入購物車並提交訂單 (session)、
         - 異步發送訂單確認電子郵件給客戶 (Celery + Redis + Gmail)、
-        - 分享到 Facebook
-        - 查看 Google 地圖
+        - 分享到 Facebook、
+        - 查看 Google 地圖、
         - 後台管理商品清單。
     - 響應式網站設計 (RWD)。
     - 國際化 (i18n)。
@@ -90,7 +90,7 @@
         - padding-left, padding-right
         - ex： `px-1`
     - py：
-        - padding-top, padding-top
+        - padding-top, padding-bottom
         - ex：`py-2`
     - mt：
         - margin-top
@@ -98,7 +98,7 @@
     - mb：
         - margin-bottom
         - ex：`mb-4`
-- flexbos：
+- flexbox：
     - Bootstrap 4 以後開始用 flexbox 而不是 floats 來管理 layout。
     - row：
         - 左右 (x軸)
