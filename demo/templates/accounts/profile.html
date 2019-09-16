@@ -14,7 +14,7 @@
             </div>
             <div class="card-body px-5">
                 {{ass.extra_data}}
-                {% if ass %}
+                {% if backends.associated %}
                     {% for ass in backends.associated %}
                         <div class="text-center mb-3">
                             {% if ass.provider == 'facebook' %}

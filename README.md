@@ -1,38 +1,38 @@
 # python-Django-demo
-- [繁體中文 (Traditional Chinese)](https://github.com/ZoeLiao/python-Django-demo/blob/master/README.zh-TW.md)
-- Use Django & Bootstrap to build an online demo shopping site and deploy on AWS.
+- [繁體中文 README.md (Traditional Chinese README.md)](https://github.com/ZoeLiao/python-Django-demo/blob/master/README.zh-TW.md)
+- Use Django, Bootstrap, MySQL, Celery, Redis, Docker to build an online demo shopping site and deploy on AWS.
 - Demo Website: [https://zoeliao.nctu.me](https://zoeliao.nctu.me) (account: root, passowrd: admin)
 - Images: 
-    - homepage  
+    - Homepage  
     ![demo_homepgae_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_homepage_en.png)
-    - products  
+    - Products  
     ![demo_products_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_products_en.png)
-    - no product  
+    - Product - Coming Soon  (No Image)   
     ![demo_no_image_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_no_image_en.png)
-    - detail  
+    - Product Detail  
     ![demo_detail_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_detail_en.png)
-    - cart  
+    - Cart  
     ![demo_carts_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_carts_en.png)
-    - checkout  
+    - Checkout  
     ![demo_checkout_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_checkout_en.png)
-    - share  
+    - Sharing  
     ![demo_share_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_share_en.png)
     - order confirmation email  
     ![demo_mail.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_mail.png)
-    - login  
+    - Sign In  
     ![demo_3parts_login_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_3parts_login_en.png)
-    - login - github  
+    - Sign In - GitHub  
     ![demo_3parts_login_github_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_3parts_login_github_en.png)
-    - demo map  
+    - Demo Map  
     ![demo_map_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_map_en.png)
 
 - Functions:
     - Support to:
         - Add goods to shopping cart (recorded by session),
         - Send order confirmation email to customers (Celery + Redis + Gmail),
-        - Sign in with third-party accounts (Facebook, Instagram, Github),
-        - Share to Facebook
-        - View address on Google Map
+        - Sign in with third-party accounts (Facebook, Instagram, GitHub),
+        - Share to Facebook,
+        - View address on Google Map,
         - Manage Categories and Goods in the admin interface.
     - Responsive web design (RWD).
     - Internationalization (i18n).
@@ -40,7 +40,7 @@
 - Techniques & tools for building the demo website:
     - Backend:
         - [Django (2.2)](https://www.djangoproject.com/)
-            - social-auth-app-django (Facebook, Instagram, Github)
+            - social-auth-app-django (Facebook, Instagram, GitHub)
             - session
             - form
             - email
@@ -63,7 +63,7 @@
         - [Jenkins](https://jenkins.io/zh/) (TODO)
 - Reference:
     - [shopping site (中文)](https://kknews.cc/zh-tw/code/pe9o3x8.html)
-    - [Loggin in with social media accounts](https://scotch.io/tutorials/django-authentication-with-facebook-instagram-and-linkedin)
+    - [Sign in with social media accounts](https://scotch.io/tutorials/django-authentication-with-facebook-instagram-and-linkedin)
     - [twtrubiks/docker-django-nginx-uwsgi-postgres-tutorial](https://github.com/twtrubiks/docker-django-nginx-uwsgi-postgres-tutorial)
 
 ## Set up
@@ -74,6 +74,10 @@
 - `export PYTHONPATH=$PWD`
 - `python manage.py migrate`
 - `python manage.py createsuperuser`
+- Add demo/settings/loca/ and add your email information, and facebook, instagram, GitHub key (Please read [Send emails](https://github.com/ZoeLiao/python-Django-demo#send-emails) and [Sign in with third-party accounts](https://github.com/ZoeLiao/python-Django-demo#Sign-in-with-third-party-accounts))
+- `python manage.py runserver`
+- Visit [http://localhost:8000/](http://localhost:8000/)
+- To send email, please open a new tab and run the command of [Celery - start](https://github.com/ZoeLiao/python-Django-demo#Celery)
 
 ## Start an app
 - If you want to add a new funtion:
@@ -102,13 +106,27 @@
 - `python manage.py collectstatic`
 
 ## Send emails
-- Create settings_local.py by `vim demo/settings_local.py` (settings_local.py is an ignored file)
+- If there is not settings/local.py, create it by `vim demo/settings/local.py` (settings/local.py is an ignored file)
 - Input your email information in demo/settings/local.py:
     - `EMAIL_HOST = 'smtp.gmail.com'`
     - `EMAIL_PORT = 587`
     - `EMAIL_HOST_USER = '<your_email>@gmail.com'`
     - `EMAIL_HOST_PASSWORD = '<your_password>'`
 - start Celery by the following command
+
+## Sign in with third-party accounts:
+- If there is not settings/local.py, create it by `vim demo/settings/local.py` (settings/local.py is an ignored file)
+- Input your Facebook, Instagram, GitHub key in demo/settings/local.py:
+    - Facebook (If you do not hav key, please visit: [facebook for developers](https://developers.facebook.com/docs/facebook-login/web)):
+        - `SOCIAL_AUTH_FACEBOOK_KEY = <your Facebook key>`
+        - `SOCIAL_AUTH_FACEBOOK_SECRET = <your Facebook secret>`
+    - Instagram (If you do not hav key, please visit: [Instagram for developers](https://www.instagram.com/developer/)):
+        - `SOCIAL_AUTH_FACEBOOK_KEY = <your Facebook key>`
+        - `SOCIAL_AUTH_INSTAGRAM_KEY = <your Instagram key>`
+        - `SOCIAL_AUTH_INSTAGRAM_SECRET = <your Instagram secret>`
+    - GitHub (If you do not hav key, please visit: [GitHub Dveloper](https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/)):
+        - `SOCIAL_AUTH_GITHUB_KEY = <your GitHub key>`
+        - `SOCIAL_AUTH_GITHUB_SECRET = <your GitHub secret>`
 
 ## Celery
 - Start: `celery -A demo worker -l info`

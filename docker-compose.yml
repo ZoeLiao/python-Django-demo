@@ -15,7 +15,9 @@ services:
       # linux
       - api_data:/docker_api
       - ./log:/var/log/nginx
-      - /etc/letsencrypt/:/etc/letsencrypt/
+      - /etc/letsencrypt:/etc/letsencrypt
+      - ./demo/static:/docker_api/static
+      - ./demo/media:/docker_api/media
       # mac
       #- /usr/local/etc/nginx/
     depends_on:
@@ -28,6 +30,8 @@ services:
     command: uwsgi --ini uwsgi.ini
     volumes:
       - api_data:/docker_api
+      - ./demo/static:/docker_api/static
+      - ./demo/media:/docker_api/media
     depends_on:
       - redis 
 

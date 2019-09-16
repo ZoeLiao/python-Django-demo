@@ -1,6 +1,6 @@
 # python-Django-demo
-- [English (英文)](https://github.com/ZoeLiao/python-Django-demo/blob/master/README.md)
-- 這是一個用 Django 與 Bootstrap 架設，部署在 AWS 的購物網站的倉庫。
+- [English README.md (英文 README.md)](https://github.com/ZoeLiao/python-Django-demo/blob/master/README.md)
+- 這是一個用 Django、Bootstrap、MySQL、Celery、Redis、Docker 架設並部署在 AWS 的購物網站。
 - Demo 網址：[https://zoeliao.nctu.me](https://zoeliao.nctu.me) (管理介面帳號：root，密碼：admin)
 ![demo_homepage_zh_Hant.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_homepage_zh_Hant.png)
 - 功能：
@@ -39,6 +39,7 @@
         - [Certbot (Let's encryp)](https://certbot.eff.org/)
         - [Jenkins](https://jenkins.io/zh/) (TODO)
 
+- 展示圖片與程式指令請查看：[English READEM.md (英文 README.md)](https://github.com/ZoeLiao/python-Django-demo/blob/master/README.md)
 - 參考資料：
     - [shopping site (中文)](https://kknews.cc/zh-tw/code/pe9o3x8.html)
     - [Loggin in with social media accounts](https://scotch.io/tutorials/django-authentication-with-facebook-instagram-and-linkedin)
@@ -112,6 +113,6 @@
     - [twtrubiks/docker-django-nginx-uwsgi-postgres-tutorial](https://github.com/twtrubiks/docker-django-nginx-uwsgi-postgres-tutorial)
 - HTTPS 管理：
     - 域名申請：
-        - (NCTU Domain免費網域申請教學)[https://medium.com/@NorthBei/nctu-domain%E5%85%8D%E8%B2%BB%E7%B6%B2%E5%9F%9F%E7%94%B3%E8%AB%8B%E6%95%99%E5%AD%B8-b629fdaaad90]
+        - [NCTU Domain免費網域申請教學](https://medium.com/@NorthBei/nctu-domain%E5%85%8D%E8%B2%BB%E7%B6%B2%E5%9F%9F%E7%94%B3%E8%AB%8B%E6%95%99%E5%AD%B8-b629fdaaad90)
     - [Certbot (Let's encryp)](https://certbot.eff.org/)
     - [解析 Certbot（Let's encrypt） 使用方式](https://andyyou.github.io/2019/04/13/how-to-use-certbot/)
