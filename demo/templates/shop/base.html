@@ -96,12 +96,12 @@
                     <!--/ dropdown -->
                 </ul>
 
-                <!-- search by google -->
-                <form class="form-inline my-2 my-lg-0" action="http://google.com/search" target="_blank">
-                    <input class="form-control mr-sm-2" name="q" type="search" placeholder="{% trans 'Search' %}" aria-label="Search">
+                <!-- search -->
+                <form class="form-inline my-2 my-lg-0" action="/search">
+                    <input class="form-control mr-sm-2" name="q" type="search" placeholder="{% trans 'Search' %}" value="{{ query }}" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">{% trans "Search" %}</button>
                 </form>
-                <!--/ search by google -->
+                <!--/ search -->
             </div>
         </div>
     </nav>
