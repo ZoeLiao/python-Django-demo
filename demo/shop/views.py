@@ -54,3 +54,23 @@ def product_detail(request, id, slug):
             'cart_product_form': cart_product_form
         }
     )
+
+
+def product_search(request):
+    query = request.GET.get('q')
+    if query:
+        products = Product.objects.filter(name__contains=query)
+    else:
+        products = Product.objects.filter(available=True)
+    category = None
+    categories = Category.objects.all()
+    return render(
+        request,
+        'shop/product/list.html',
+        {
+            'category': category,
+            'categories': categories,
+            'products': products,
+            'query': query
+        }
+    )
