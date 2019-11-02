@@ -25,6 +25,8 @@
     ![demo_3parts_login_github_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_3parts_login_github_en.png)
     - Demo Map  
     ![demo_map_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_map_en.png)
+    - Google Analytics (GA)
+    ![demo_ga.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_ga.png)
 
 - Functions:
     - Support to:
@@ -51,6 +53,7 @@
             - [flower](https://flower.readthedocs.io/en/latest/)
     - Frontend:
         - [Bootstrap (4.3)](https://getbootstrap.com/)
+        - [Google Analytics (gtag.js)](https://developers.google.com/analytics/devguides/collection/gtagjs)
     - Database:
         - [MySQL](https://www.mysql.com/)
     - Cache:
@@ -65,6 +68,7 @@
     - [shopping site (中文)](https://kknews.cc/zh-tw/code/pe9o3x8.html)
     - [Sign in with social media accounts](https://scotch.io/tutorials/django-authentication-with-facebook-instagram-and-linkedin)
     - [twtrubiks/docker-django-nginx-uwsgi-postgres-tutorial](https://github.com/twtrubiks/docker-django-nginx-uwsgi-postgres-tutorial)
+    - [Google Analytics - gtagjs](https://developers.google.com/analytics/devguides/collection/gtagjs)
 
 ## Set up
 - `python3 -m venv venv`

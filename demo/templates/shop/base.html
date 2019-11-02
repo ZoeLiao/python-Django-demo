@@ -35,6 +35,15 @@
     <meta name="twitter:image:src" content="{% static 'images/logo.png' %}">
     <!--/ Twitter Card data -->
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151316261-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+   </script>
+    <!--/ Global site tag (gtag.js) - Google Analytics -->
+
     {% block extra_style_sheet %} {% endblock %}
 </head>
 
@@ -53,20 +62,20 @@
                 <ul class="navbar-nav mr-auto">
                     {{ request.name }}
                     <li class="nav-item {% if request.resolver_match.url_name == 'homepage' %}active{% endif %}">
-                        <a class="nav-link" href="/">{% trans "Home" %}</a>
+                        <a class="nav-link" href="/" onclick="gaClick('home', 100)">{% trans "Home" %}</a>
                     </li>
 
                     <!-- cart -->
                     {% with total_items=cart|length %}
                     <li class="nav-item {% if request.resolver_match.url_name == 'cart_detail' %}active{% endif %}">
-                        <a class="nav-link" href="{% url 'cart:cart_detail' %}">{% trans "Cart" %}{% if  total_items  != 0 %}<input type="button" value="{{ total_items }}" class="btn btn-outline-info btn-sm ml-1 cart-button">{% endif %}{% if request.resolver_match.url_name == 'cart_list' %}{% endif %}</a>
+                        <a class="nav-link" href="{% url 'cart:cart_detail' %}" onclick="gaClick('cart', 200)">{% trans "Cart" %}{% if  total_items  != 0 %}<input type="button" value="{{ total_items }}" class="btn btn-outline-info btn-sm ml-1 cart-button">{% endif %}{% if request.resolver_match.url_name == 'cart_list' %}{% endif %}</a>
                     </li>
                     {% endwith %}
                     <!--/ cart -->
 
                     <!-- My Account -->
                     <li class="nav-item {% if request.resolver_match.url_name == 'profile' or request.resolver_match.url_name == 'signin' %}active{% endif %}">
-                        <a class="nav-link" href="{% url 'accounts:profile' %}">{% trans "My Account" %}</a>
+                        <a class="nav-link" href="{% url 'accounts:profile' %}" onclick="gaClick('account', 200)">{% trans "My Account" %}</a>
                     </li>
                     <!--/ My Account -->
 
@@ -78,7 +87,7 @@
 
                     <!-- dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="{% url 'accounts:profile' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% trans "Language" %}</a>
+                        <a class="nav-link dropdown-toggle" href="{% url 'accounts:profile' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="gaClick('language', 200)">{% trans "Language" %}</a>
                         <form action="{% url 'set_language' %}" method="post" id="lang_form">{% csrf_token %}
                             <input name="next" type="hidden" value="{{ redirect_to }}">
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -97,8 +106,8 @@
                 </ul>
 
                 <!-- search -->
-                <form class="form-inline my-2 my-lg-0" action="/search">
-                    <input class="form-control mr-sm-2" name="q" type="search" placeholder="{% trans 'Search' %}" value="{{ query }}" aria-label="Search">
+                <form class="form-inline my-2 my-lg-0" action="/search" onclick="gaSearch()">
+                    <input class="form-control mr-sm-2" name="q" type="search" placeholder="{% trans 'Search' %}" value="{{ query }}" aria-label="Search" id="nav_search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">{% trans "Search" %}</button>
                 </form>
                 <!--/ search -->
@@ -124,7 +133,26 @@
 
     {% block extra_script %}{% endblock %}
     <script>
+
+        function gaClick(eventLabel, value){
+            gtag('event', 'Nav Click', {
+                'event_category': 'Click',
+                'event_label': eventLabel,
+                'value': value
+            });
+        }
+
+        function gaSearch(){
+            let searchTerm = $('#nav_search').val();
+            gtag('event', 'Nav Search', {
+                'event_category': 'Search',
+                'event_label': 'search_term',
+                'value': searchTerm,
+            });
+        }
+
         {% block extra_js %}  {% endblock %}
+
     </script>
 </body>
 
