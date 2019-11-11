@@ -27,6 +27,8 @@
     ![demo_map_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_map_en.png)
     - Google Analytics (GA)
     ![demo_ga.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_ga.png)
+    - CloudWatch
+    ![cloudWatch.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/cloud_watch.png)
 
 - Functions:
     - Support to:
