@@ -10,3 +10,5 @@ local.py
 
 log
 acme-challenge
+
+.env

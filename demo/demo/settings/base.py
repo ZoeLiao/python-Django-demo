@@ -206,3 +206,52 @@ WEBSITE_URL = 'http://localhost:8000'
 WEBSITE_TITLE = 'Demo Shopping site'
 WEBSITE_DESCRIPTION = 'This is a demo shopping site, built with Django & Bootstrap.'
 WEBSITE_AUTHOR = 'ZoeLiao'
+
+# logger
+import environ
+from boto3.session import Session
+
+env = environ.Env(
+    # set casting, default value
+    DEBUG=(bool, True)
+)
+environ.Env.read_env()
+
+AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
+AWS_REGION_NAME = env('AWS_REGION_NAME')
+boto3_session = Session(aws_access_key_id=AWS_ACCESS_KEY_ID,
+                        aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
+                        region_name=AWS_REGION_NAME)
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        # custom format
+        'aws': {
+            'format': u"%(asctime)s [%(levelname)-8s] %(message)s [%(pathname)s:%(lineno)d]",
+            'datefmt': "%Y-%m-%d %H:%M:%S"
+        },
+    },
+    'handlers': {
+        'watchtower': {
+            'level': 'DEBUG',
+            'class': 'watchtower.CloudWatchLogHandler',
+                     'boto3_session': boto3_session,
+                     'log_group': 'myLogGroup', # your log group
+                     'stream_name': 'myStream', # your stream
+            'formatter': 'aws', # use custom format
+        },
+    },
+    'loggers': {
+        'watchtower-logger': {
+            'level': 'DEBUG',
+            'handlers': ['watchtower'],
+            'propagate': False,
+        },
+        # add your other loggers here...
+    },
+}
+
+
