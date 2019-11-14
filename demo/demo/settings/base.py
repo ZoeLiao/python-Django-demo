@@ -217,17 +217,37 @@ env = environ.Env(
 )
 environ.Env.read_env()
 
-AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
-AWS_REGION_NAME = env('AWS_REGION_NAME')
-boto3_session = Session(aws_access_key_id=AWS_ACCESS_KEY_ID,
-                        aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
-                        region_name=AWS_REGION_NAME)
+try:
+    AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID12')
+    AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
+    AWS_REGION_NAME = env('AWS_REGION_NAME')
+    boto3_session = Session(aws_access_key_id=AWS_ACCESS_KEY_ID,
+                    aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
+                    region_name=AWS_REGION_NAME)
+    watchtower = {
+        'level': 'DEBUG',
+        'class': 'watchtower.CloudWatchLogHandler',
+                 'boto3_session': boto3_session,
+                 'log_group': 'myLogGroup', # your log group
+                 'stream_name': 'myStream', # your stream
+        'formatter': 'aws' # use custom format
+    }
+except:
+    print('Skip sending log to AWS...')
+    watchtower = {
+        'level': 'DEBUG',
+        'class': 'logging.StreamHandler',
+        'formatter': 'verbose'
+    }
 
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
         # custom format
         'aws': {
             'format': u"%(asctime)s [%(levelname)-8s] %(message)s [%(pathname)s:%(lineno)d]",
@@ -235,14 +255,7 @@ LOGGING = {
         },
     },
     'handlers': {
-        'watchtower': {
-            'level': 'DEBUG',
-            'class': 'watchtower.CloudWatchLogHandler',
-                     'boto3_session': boto3_session,
-                     'log_group': 'myLogGroup', # your log group
-                     'stream_name': 'myStream', # your stream
-            'formatter': 'aws', # use custom format
-        },
+        'watchtower': watchtower,
     },
     'loggers': {
         'watchtower-logger': {
@@ -253,5 +266,3 @@ LOGGING = {
         # add your other loggers here...
     },
 }
-
-

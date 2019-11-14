@@ -41,6 +41,7 @@
     - Responsive web design (RWD).
     - Internationalization (i18n).
     - Deployment (AWS + Docker + uWSGI + NGINX + Certbot).
+    - Use GA to understand user behavior
 - Techniques & tools for building the demo website:
     - Backend:
         - [Django (2.2)](https://www.djangoproject.com/)
@@ -75,17 +76,16 @@
 ## Set up
 - `python3 -m venv venv`
 - `. venv/bin/activate`
-- `pip install -r requirements.txt`
 - `cd demo`
-- `export PYTHONPATH=$PWD`
+- `pip install -r requirements.txt`
 - `python manage.py migrate`
 - `python manage.py createsuperuser`
-- Add demo/settings/loca/ and add your email information, and facebook, instagram, GitHub key (Please read [Send emails](https://github.com/ZoeLiao/python-Django-demo#send-emails) and [Sign in with third-party accounts](https://github.com/ZoeLiao/python-Django-demo#Sign-in-with-third-party-accounts))
+- Add demo/settings/local.py and add your email information, and facebook, instagram, GitHub key (Please read [Send emails](https://github.com/ZoeLiao/python-Django-demo#send-emails) and [Sign in with third-party accounts](https://github.com/ZoeLiao/python-Django-demo#Sign-in-with-third-party-accounts))
 - `python manage.py runserver`
 - Visit [http://localhost:8000/](http://localhost:8000/)
 
 ## Start an app
-- If you want to add a new funtion:
+- If you want to add a new app:
     - `django-admin startapp <app_name>`
 
 ## Migrate database
@@ -122,13 +122,13 @@
 ## Sign in with third-party accounts:
 - If there is not settings/local.py, create it by `vim demo/settings/local.py` (settings/local.py is an ignored file)
 - Input your Facebook, Instagram, GitHub key in demo/settings/local.py:
-    - Facebook (If you do not hav key, please visit: [facebook for developers](https://developers.facebook.com/docs/facebook-login/web)):
+    - Facebook (If you do not have a key, please visit: [facebook for developers](https://developers.facebook.com/docs/facebook-login/web)):
         - `SOCIAL_AUTH_FACEBOOK_KEY = <your Facebook key>`
         - `SOCIAL_AUTH_FACEBOOK_SECRET = <your Facebook secret>`
-    - Instagram (If you do not hav key, please visit: [Instagram for developers](https://www.instagram.com/developer/)):
+    - Instagram (If you do not have a key, please visit: [Instagram for developers](https://www.instagram.com/developer/)):
         - `SOCIAL_AUTH_INSTAGRAM_KEY = <your Instagram key>`
         - `SOCIAL_AUTH_INSTAGRAM_SECRET = <your Instagram secret>`
-    - GitHub (If you do not hav key, please visit: [GitHub Dveloper](https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/)):
+    - GitHub (If you do not have a key, please visit: [GitHub Dveloper](https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/)):
         - `SOCIAL_AUTH_GITHUB_KEY = <your GitHub key>`
         - `SOCIAL_AUTH_GITHUB_SECRET = <your GitHub secret>`
 

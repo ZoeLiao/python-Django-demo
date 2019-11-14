@@ -1,7 +1,7 @@
 # python-Django-demo
 - [English README.md (英文 README.md)](https://github.com/ZoeLiao/python-Django-demo/blob/master/README.md)
 - 這是一個用 Django、Bootstrap、MySQL、Celery、Redis、Docker 架設並部署在 AWS 的購物網站。
-- Demo 網址：[https://zoeliao.nctu.me](https://zoeliao.nctu.me) (管理介面帳號：root，密碼：admin)（因為沒有要找工作所以下線了）
+- Demo 網址：[https://zoeliao.nctu.me](https://zoeliao.nctu.me) (管理介面帳號：root，密碼：admin)（因為沒錢錢所以常常下線）
 ![demo_homepage_zh_Hant.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_homepage_zh_Hant.png)
 - 功能：
     - 支持：
@@ -14,6 +14,8 @@
     - 響應式網站設計 (RWD)。
     - 國際化 (i18n)。
     - 部署 (AWS + Docker + uWSGI + NGINX + Certbot)。
+    - 用 GA 分析用戶行為
+    - 在 CloudWatch 查看 log
 - 使用技術與工具：
     - 後端：
         - [Django (2.2)](https://www.djangoproject.com/)
