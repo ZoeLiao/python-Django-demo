@@ -1,7 +1,7 @@
 # python-Django-demo
 - [English README.md (英文 README.md)](https://github.com/ZoeLiao/python-Django-demo/blob/master/README.md)
 - 這是一個用 Django、Bootstrap、MySQL、Celery、Redis、Docker 架設並部署在 AWS 的購物網站。
-- Demo 網址：[https://zoeliao.nctu.me](https://zoeliao.nctu.me) (管理介面帳號：root，密碼：admin)
+- Demo 網址：[https://zoeliao.nctu.me](https://zoeliao.nctu.me) (管理介面帳號：root，密碼：admin)（因為沒有要找工作所以下線了）
 ![demo_homepage_zh_Hant.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_homepage_zh_Hant.png)
 - 功能：
     - 支持：
@@ -28,6 +28,7 @@
             - [flower](https://flower.readthedocs.io/en/latest/)
     - 前端:
         - [Bootstrap (4.3)](https://getbootstrap.com/)
+        - [Google Analytics (gtag.js)](https://developers.google.com/analytics/devguides/collection/gtagjs)
     - 資料庫:
         - [MySQL](https://www.mysql.com/)
     - 緩存：
@@ -50,6 +51,7 @@
 - [Django + Celery + Redis + Gmail 實現異步寄信](https://medium.com/@zoejoyuliao/django-celery-redis-gmail-%E5%AF%84%E4%BF%A1-375904d4224c)
 - [Django 國際化（一）- 在 template 、views、models 新增 i18n 標籤生成 .po & .mo 檔](https://medium.com/@zoejoyuliao/django-%E5%9C%8B%E9%9A%9B%E5%8C%96-i18n-%E4%B8%80-%E5%9C%A8-template-%E6%96%B0%E5%A2%9E-i18n-%E6%A8%99%E7%B1%A4%E7%94%9F%E6%88%90-po-mo-%E6%AA%94-1d41f2fcfc78)
 - [磁盤空間不足 (No space left on device)](https://medium.com/@zoejoyuliao/%E7%A3%81%E7%9B%A4%E7%A9%BA%E9%96%93%E4%B8%8D%E8%B6%B3-no-space-left-on-device-b31da374a865)
+- [Plug your Django application logging directly into AWS CloudWatch](https://medium.com/@zoejoyuliao/plug-your-django-application-logging-directly-into-aws-cloudwatch-d2ec67898c0b)
 
 ## 其他筆記
 ### Django
