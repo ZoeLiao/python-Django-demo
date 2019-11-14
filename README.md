@@ -1,7 +1,7 @@
 # python-Django-demo
 - [繁體中文 README.md (Traditional Chinese README.md)](https://github.com/ZoeLiao/python-Django-demo/blob/master/README.zh-TW.md)
 - Use Django, Bootstrap, MySQL, Celery, Redis, Docker to build an online demo shopping site and deploy on AWS.
-- Demo Website: [https://zoeliao.nctu.me](https://zoeliao.nctu.me) (account: root, passowrd: admin)
+- Demo Website: [https://zoeliao.nctu.me](https://zoeliao.nctu.me) (account: root, passowrd: admin) (the website is no longer available.)
 - Images: 
     - Homepage  
     ![demo_homepgae_en.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_homepage_en.png)
