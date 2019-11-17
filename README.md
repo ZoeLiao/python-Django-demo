@@ -80,7 +80,7 @@
 - `pip install -r requirements.txt`
 - `python manage.py migrate`
 - `python manage.py createsuperuser`
-- Add demo/settings/local.py (you can cp [demo/settings/local_example.py](https://github.com/ZoeLiao/python-Django-demo/blob/master/demo/demo/settings/demo_example.py) and revise it.) and add your email information, and facebook, instagram, GitHub key (Please read [Send emails](https://github.com/ZoeLiao/python-Django-demo#send-emails) and [Sign in with third-party accounts](https://github.com/ZoeLiao/python-Django-demo#Sign-in-with-third-party-accounts))
+- Add demo/settings/local.py (you can copy [demo/settings/local_example.py](https://github.com/ZoeLiao/python-Django-demo/blob/master/demo/demo/settings/local_example.py) and revise it.) and add your email information, and facebook, instagram, GitHub key (Please read [Send emails](https://github.com/ZoeLiao/python-Django-demo#send-emails) and [Sign in with third-party accounts](https://github.com/ZoeLiao/python-Django-demo#Sign-in-with-third-party-accounts))
 - `python manage.py runserver`
 - Visit [http://localhost:8000/](http://localhost:8000/)
 
@@ -111,7 +111,7 @@
 - `python manage.py collectstatic`
 
 ## Send emails
-- If there is not settings/local.py, create it by `vim demo/settings/local.py` (settings/local.py is an ignored file. (you can cp [demo/settings/local_example.py](https://github.com/ZoeLiao/python-Django-demo/blob/master/demo/demo/settings/demo_example.py) and revise it.))
+- If there is not settings/local.py, create it by `vim demo/settings/local.py` (settings/local.py is an ignored file. (you can copy [demo/settings/local_example.py](https://github.com/ZoeLiao/python-Django-demo/blob/master/demo/demo/settings/local_example.py) and revise it.))
 - Input your email information in demo/settings/local.py:
     - `EMAIL_HOST = 'smtp.gmail.com'`
     - `EMAIL_PORT = 587`
@@ -120,7 +120,7 @@
 - Start Celery by the following command of [Celery - start](https://github.com/ZoeLiao/python-Django-demo#Celery)
 
 ## Sign in with third-party accounts:
-- If there is not settings/local.py, create it by `vim demo/settings/local.py` (settings/local.py is an ignored file. (you can cp [demo/settings/local_example.py](https://github.com/ZoeLiao/python-Django-demo/blob/master/demo/demo/settings/demo_example.py) and revise it.))
+- If there is not settings/local.py, create it by `vim demo/settings/local.py` (settings/local.py is an ignored file. (you can copy [demo/settings/local_example.py](https://github.com/ZoeLiao/python-Django-demo/blob/master/demo/demo/settings/local_example.py) and revise it.))
 - Input your Facebook, Instagram, GitHub key in demo/settings/local.py:
     - Facebook (If you do not have a key, please visit: [facebook for developers](https://developers.facebook.com/docs/facebook-login/web)):
         - `SOCIAL_AUTH_FACEBOOK_KEY = <your Facebook key>`
