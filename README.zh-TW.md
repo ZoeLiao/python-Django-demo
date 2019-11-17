@@ -3,7 +3,7 @@
 - 這是一個用 Django、Bootstrap、MySQL、Celery、Redis、Docker 架設並部署在 AWS 的購物網站。
 - Demo 網址：[https://zoeliao.nctu.me](https://zoeliao.nctu.me) (管理介面帳號：root，密碼：admin)（因為沒錢錢所以常常下線）
 ![demo_homepage_zh_Hant.png](https://raw.githubusercontent.com/ZoeLiao/python-Django-demo/zoeliao/dev/demo/static/images/demo_homepage_zh_Hant.png)
-- 功能：
+- 功能(部分功能的做法有寫在下面的 [Medium 筆記](https://github.com/ZoeLiao/python-Django-demo/blob/master/README.zh-TW.md#medium-%E7%AD%86%E8%A8%98))：
     - 支持：
         - 第三方登入 (Facebook、Instagram、Github)、
         - 將商品加入購物車並提交訂單 (session)、
@@ -52,6 +52,7 @@
 - [如何將 Google 地圖嵌入網站？](https://medium.com/@zoejoyuliao/%E5%A6%82%E4%BD%95%E5%9C%A8%E7%B6%B2%E7%AB%99%E5%B5%8C%E5%85%A5-google-%E5%9C%B0%E5%9C%96-636d3452b80d)
 - [Django + Celery + Redis + Gmail 實現異步寄信](https://medium.com/@zoejoyuliao/django-celery-redis-gmail-%E5%AF%84%E4%BF%A1-375904d4224c)
 - [Django 國際化（一）- 在 template 、views、models 新增 i18n 標籤生成 .po & .mo 檔](https://medium.com/@zoejoyuliao/django-%E5%9C%8B%E9%9A%9B%E5%8C%96-i18n-%E4%B8%80-%E5%9C%A8-template-%E6%96%B0%E5%A2%9E-i18n-%E6%A8%99%E7%B1%A4%E7%94%9F%E6%88%90-po-mo-%E6%AA%94-1d41f2fcfc78)
+- [Django 國際化（二）- 設置以「語言」開頭的 URL 並支持用戶切換語言](https://medium.com/@zoejoyuliao/django-%E5%9C%8B%E9%9A%9B%E5%8C%96-%E4%BA%8C-%E8%A8%AD%E7%BD%AE%E4%BB%A5-%E8%AA%9E%E8%A8%80-%E9%96%8B%E9%A0%AD%E7%9A%84-url-%E4%B8%A6%E6%94%AF%E6%8C%81%E7%94%A8%E6%88%B6%E5%88%87%E6%8F%9B%E8%AA%9E%E8%A8%80-f2c2b3030f38)
 - [磁盤空間不足 (No space left on device)](https://medium.com/@zoejoyuliao/%E7%A3%81%E7%9B%A4%E7%A9%BA%E9%96%93%E4%B8%8D%E8%B6%B3-no-space-left-on-device-b31da374a865)
 - [Plug your Django application logging directly into AWS CloudWatch](https://medium.com/@zoejoyuliao/plug-your-django-application-logging-directly-into-aws-cloudwatch-d2ec67898c0b)
 
