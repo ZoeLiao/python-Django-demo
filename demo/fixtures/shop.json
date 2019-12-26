@@ -1,0 +1,150 @@
+[
+{
+  "model": "shop.category",
+  "pk": 1,
+  "fields": {
+    "name": "pink-bag",
+    "slug": "pink-bag",
+    "image": "categories/2019/09/09/pink_pk.png"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 2,
+  "fields": {
+    "name": "blue-bag",
+    "slug": "blue-bag",
+    "image": "categories/2019/09/09/blue_package-01.png"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 3,
+  "fields": {
+    "name": "yellow-bag",
+    "slug": "yellow-bag",
+    "image": "categories/2019/09/11/yellow_pk.png"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 4,
+  "fields": {
+    "name": "green-bag",
+    "slug": "green-bag",
+    "image": "categories/2019/09/11/green_pk.png"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 1,
+  "fields": {
+    "category": 1,
+    "name": "pink D",
+    "slug": "pink-D",
+    "image": "products/2019/09/09/pink_package_D-01.png",
+    "description": "The most famous D pink package",
+    "price": "55.00",
+    "stock": 5,
+    "available": true,
+    "created_at": "2019-09-05T14:00:00Z",
+    "updated_at": "2019-09-09T14:06:54.870Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 2,
+  "fields": {
+    "category": 1,
+    "name": "pink E",
+    "slug": "pink-E",
+    "image": "products/2019/09/09/pink-package-E-01.png",
+    "description": "",
+    "price": "44.00",
+    "stock": 3,
+    "available": true,
+    "created_at": "2019-09-09T14:08:10Z",
+    "updated_at": "2019-09-11T12:09:05.214Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 3,
+  "fields": {
+    "category": 2,
+    "name": "blue M",
+    "slug": "blue-M",
+    "image": "products/2019/09/11/blue_pk_M-01.png",
+    "description": "This is a blue package M",
+    "price": "22.00",
+    "stock": 2,
+    "available": true,
+    "created_at": "2019-09-11T12:07:49Z",
+    "updated_at": "2019-09-11T12:10:07.422Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 4,
+  "fields": {
+    "category": 2,
+    "name": "blue D",
+    "slug": "blue-D",
+    "image": "products/2019/09/11/blue_pk_D-01.png",
+    "description": "This is a blue package D",
+    "price": "6.00",
+    "stock": 6,
+    "available": true,
+    "created_at": "2019-09-11T12:09:17Z",
+    "updated_at": "2019-09-11T12:09:49.612Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 5,
+  "fields": {
+    "category": 2,
+    "name": "blue O",
+    "slug": "blue-O",
+    "image": "products/2019/09/11/blue_pk_O-01.png",
+    "description": "This is a blue package O",
+    "price": "56.00",
+    "stock": 56,
+    "available": true,
+    "created_at": "2019-09-11T12:10:10Z",
+    "updated_at": "2019-09-11T12:10:33.242Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 6,
+  "fields": {
+    "category": 4,
+    "name": "green D",
+    "slug": "green-D",
+    "image": "products/2019/09/11/package_green_D.png",
+    "description": "This is a green package D",
+    "price": "20.00",
+    "stock": 2,
+    "available": true,
+    "created_at": "2019-09-11T12:16:42Z",
+    "updated_at": "2019-09-11T12:18:10.669Z"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 7,
+  "fields": {
+    "category": 4,
+    "name": "green E",
+    "slug": "green-E",
+    "image": "products/2019/09/11/package_green_E.png",
+    "description": "This is a green package E",
+    "price": "45.00",
+    "stock": 45,
+    "available": true,
+    "created_at": "2019-09-11T12:18:12Z",
+    "updated_at": "2019-09-11T12:18:32.869Z"
+  }
+}
+]

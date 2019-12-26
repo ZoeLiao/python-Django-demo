@@ -64,7 +64,7 @@
     - Deployment:
         - [AWS](https://aws.amazon.com/tw/)
         - [Docker](https://www.docker.com/)
-        - [AGINX](https://nginx.org/en/)
+        - [NGINX](https://nginx.org/en/)
         - [Certbot (Let's encryp)](https://certbot.eff.org/)
         - [Jenkins](https://jenkins.io/zh/) (TODO)
 - Reference:
@@ -79,6 +79,7 @@
 - `cd demo`
 - `pip install -r requirements.txt`
 - `python manage.py migrate`
+- `python manage.py loaddata fixtures/*`
 - `python manage.py createsuperuser`
 - Add demo/settings/local.py (you can copy [demo/settings/local_example.py](https://github.com/ZoeLiao/python-Django-demo/blob/master/demo/demo/settings/local_example.py) and revise it.) and add your email information, and facebook, instagram, GitHub key (Please read [Send emails](https://github.com/ZoeLiao/python-Django-demo#send-emails) and [Sign in with third-party accounts](https://github.com/ZoeLiao/python-Django-demo#Sign-in-with-third-party-accounts))
 - `python manage.py runserver`

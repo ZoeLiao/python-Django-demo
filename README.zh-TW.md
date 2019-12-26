@@ -38,7 +38,7 @@
     - 部署:
         - [AWS](https://aws.amazon.com/tw/)
         - [Docker](https://www.docker.com/)
-        - [AGINX](https://nginx.org/en/)
+        - [NGINX](https://nginx.org/en/)
         - [Certbot (Let's encryp)](https://certbot.eff.org/)
         - [Jenkins](https://jenkins.io/zh/) (TODO)
 
@@ -88,6 +88,10 @@
         - 避免在 template 硬編碼 url。
     - @require_POST：
         - 只響應 POST 請求
+
+- fixtures:
+    - 將 db 資料寫入 json：`python manage.py dumpdata <app_name>.<models_name> > fixtures/<models_name>.json --indent=2`
+    - 將 json 資料寫入 db：`python manage.py loaddata fixtures/*`
 
 ### Bootstrap
 - 元素的邊界設定：
