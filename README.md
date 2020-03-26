@@ -74,9 +74,9 @@
     - [Google Analytics - gtagjs](https://developers.google.com/analytics/devguides/collection/gtagjs)
 
 ## Set up
+- `cd demo`
 - `python3 -m venv venv`
 - `. venv/bin/activate`
-- `cd demo`
 - `pip install -r requirements.txt`
 - `python manage.py migrate`
 - `python manage.py loaddata fixtures/*`
