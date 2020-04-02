@@ -10,7 +10,7 @@ colorama==0.4.1
 configparser==4.0.2
 crayons==0.3.0
 defusedxml==0.6.0
-Django==2.2.8
+Django==2.2.10
 django-environ==0.4.5
 docutils==0.15.2
 flower==0.9.3
