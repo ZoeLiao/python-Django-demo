@@ -13,7 +13,7 @@ defusedxml==0.6.0
 Django==2.2.13
 django-environ==0.4.5
 docutils==0.15.2
-flower==0.9.3
+flower==1.2.0
 idna==2.8
 importlib-metadata==0.21
 jmespath==0.9.4
